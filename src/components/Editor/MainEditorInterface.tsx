@@ -47,6 +47,7 @@ export const MainEditorInterface = ({ className }): JSX.Element => {
       });
     }
   };
+
   const setProblems = (x: string | ((prev: string) => Promise<string>)) => {
     if (!activeFile) return;
     if (typeof x === 'string') {
@@ -75,6 +76,7 @@ export const MainEditorInterface = ({ className }): JSX.Element => {
       setProblems(old => formatProblems(old));
     }
   };
+
   const tabs = isEditingSolution
     ? [{ label: 'solution.mdx', value: 'content' }]
     : [
@@ -84,6 +86,7 @@ export const MainEditorInterface = ({ className }): JSX.Element => {
           value: 'problems',
         },
       ];
+
   return (
     <div className={classNames('tw-forms-disable-all-descendants', className)}>
       <EditorTabBar
@@ -132,35 +135,7 @@ export const MainEditorInterface = ({ className }): JSX.Element => {
             contextMenuGroupId: 'navigation',
             run: function (ed) {
               ed.trigger('keyboard', 'paste', {
-                text: `
-<LanguageSection>
-
-<CPPSection>
-
-\`\`\`cpp
-// code here
-\`\`\`
-
-</CPPSection>
-
-<PySection>
-
-\`\`\`py
-# code here
-\`\`\`
-
-</PySection>
-
-<JavaSection>
-
-\`\`\`java
-// code here
-\`\`\`
-
-</JavaSection>
-
-</LanguageSection>
-  `,
+                text: '```\n// code here\n```',
               });
             },
           });

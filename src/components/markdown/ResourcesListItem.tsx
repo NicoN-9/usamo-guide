@@ -3,7 +3,6 @@ import * as React from 'react';
 import { useRef } from 'react';
 import { Instance } from 'tippy.js';
 import { useDarkMode } from '../../context/DarkModeContext';
-import { useUserLangSetting } from '../../context/UserDataContext/properties/simpleProperties';
 import { ResourceInfo } from '../../models/resource';
 import TextTooltip from '../Tooltip/TextTooltip';
 import Tooltip from '../Tooltip/Tooltip';
@@ -15,7 +14,6 @@ export default function ResourcesListItem({
 }: {
   resource: ResourceInfo;
 }): JSX.Element {
-  const userLang = useUserLangSetting();
   const darkMode = useDarkMode();
   const id = `resource-${encodeURIComponent(resource.url!)}`;
 
@@ -92,11 +90,7 @@ export default function ResourcesListItem({
                   e.preventDefault();
                   setCopied(true);
                   navigator.clipboard.writeText(
-                    window.location.href.split(/[?#]/)[0] +
-                      '?lang=' +
-                      userLang +
-                      '#' +
-                      id
+                    window.location.href.split(/[?#]/)[0] + '#' + id
                   );
                 }}
               >

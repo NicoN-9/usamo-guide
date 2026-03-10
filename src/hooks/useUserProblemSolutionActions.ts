@@ -16,7 +16,6 @@ export default function useUserProblemSolutionActions() {
         problem_id: solution.problemID,
         is_public: solution.isPublic,
         solution_code: solution.solutionCode,
-        language: solution.language,
         user_id: currentUser?.uid,
         user_name: currentUser?.displayName ?? '',
         upvotes: [],
@@ -38,7 +37,6 @@ export default function useUserProblemSolutionActions() {
         .update({
           is_public: updates.isPublic,
           solution_code: updates.solutionCode,
-          language: updates.language,
         })
         .eq('id', solutionID);
     },

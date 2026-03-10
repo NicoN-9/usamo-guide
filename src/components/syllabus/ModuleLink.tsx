@@ -1,10 +1,6 @@
 import clsx from 'clsx';
 import { Link } from 'gatsby';
 import * as React from 'react';
-import {
-  LANGUAGE_LABELS,
-  useUserLangSetting,
-} from '../../context/UserDataContext/properties/simpleProperties';
 import { useUserProgressOnModules } from '../../context/UserDataContext/properties/userProgress';
 import { ModuleLinkInfo } from '../../models/module';
 import { FrequencyLabels } from '../Frequency';
@@ -100,15 +96,6 @@ const ModuleLink = ({ link }: { link: ModuleLinkInfo }): JSX.Element => {
     linkWithProgressColorClass = 'link-with-progress-container--ignored';
   }
 
-  const userLang = useUserLangSetting();
-  const maxLangOc = Math.max(link.cppOc ?? 0, link.javaOc ?? 0, link.pyOc ?? 0);
-  const langToOc = {
-    cpp: link.cppOc,
-    java: link.javaOc,
-    py: link.pyOc,
-    showAll: maxLangOc,
-  };
-  const isMissingLang = (langToOc[userLang] ?? 0) < maxLangOc;
   return (
     <span
       className={clsx(
@@ -129,12 +116,10 @@ const ModuleLink = ({ link }: { link: ModuleLinkInfo }): JSX.Element => {
           >
             <span className="mr-2 inline-flex items-end">
               {link.title}{' '}
-              {link.isIncomplete || isMissingLang ? (
+              {link.isIncomplete ? (
                 <Tooltip
                   content={
-                    link.isIncomplete
-                      ? 'This module has incomplete sections.'
-                      : `This module is missing sections in your language (${LANGUAGE_LABELS[userLang]}).`
+                    'This module has incomplete sections.'
                   }
                 >
                   <svg

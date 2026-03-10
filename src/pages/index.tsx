@@ -127,61 +127,7 @@ export default function IndexPage({ path }): JSX.Element {
           <div className="h-16 sm:h-24"></div>
 
           <div className="flex text-gray-600 md:justify-center md:text-xl dark:text-gray-400">
-            <a
-              href="https://joincpi.org/"
-              className="inline-flex items-center space-x-3 md:space-x-4"
-            >
-              <div className="h-9 w-9">
-                <svg
-                  className="inline-block"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 100 100"
-                >
-                  <g>
-                    <path
-                      className="fill-current text-[#6600af]"
-                      d="M50,5A45,45,0,1,1,5,50,45.05,45.05,0,0,1,50,5m0-5a50,50,0,1,0,50,50A50,50,0,0,0,50,0Z"
-                    ></path>
-                  </g>
-                  <line
-                    className="stroke-current stroke-[7px] text-[#be5eff]"
-                    style={{ strokeMiterlimit: 10 }}
-                    x1="50"
-                    y1="27"
-                    x2="73.29"
-                    y2="65.64"
-                  ></line>
-                  <line
-                    className="stroke-current stroke-[7px] text-[#be5eff]"
-                    style={{ strokeMiterlimit: 10 }}
-                    x1="50"
-                    y1="27"
-                    x2="26.71"
-                    y2="67"
-                  ></line>
-                  <circle
-                    className="fill-current text-[#961be8]"
-                    cx="50"
-                    cy="27"
-                    r="10"
-                  ></circle>
-                  <circle
-                    className="fill-current text-[#961be8]"
-                    cx="26.71"
-                    cy="67"
-                    r="10"
-                  ></circle>
-                  <circle
-                    className="fill-current text-[#961be8]"
-                    cx="73.29"
-                    cy="67"
-                    r="10"
-                  ></circle>
-                </svg>
-              </div>
-
               <span>Built by the USAMO Guide community</span>
-            </a>
           </div>
           <div className="h-4 sm:h-6 md:h-16"></div>
         </div>
@@ -272,7 +218,7 @@ export default function IndexPage({ path }): JSX.Element {
             feature={
               <div className="rounded-lg shadow-lg">
                 <StaticImage
-                  src="../assets/nontrivial.png"
+                  src="../assets/aops_banner.png"
                   alt="AoPS Community Screenshot"
                   placeholder="blurred"
                   layout="constrained"

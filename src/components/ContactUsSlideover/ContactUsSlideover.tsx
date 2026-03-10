@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useContext, useEffect, useState } from 'react';
 import { SECTION_LABELS } from '../../../content/ordering';
 import MarkdownLayoutContext from '../../context/MarkdownLayoutContext';
-import { useUserLangSetting } from '../../context/UserDataContext/properties/simpleProperties';
 import { useCurrentUser } from '../../context/UserDataContext/UserDataContext';
 import useContactFormAction from '../../hooks/useContactFormAction';
 import useStickyState from '../../hooks/useStickyState';
@@ -99,7 +98,6 @@ export default function ContactUsSlideover({
   const [showErrors, setShowErrors] = useState(false);
 
   const markdownContext = useContext(MarkdownLayoutContext);
-  const userLang = useUserLangSetting();
   const submitForm = useContactFormAction();
 
   React.useEffect(() => {
@@ -155,7 +153,6 @@ export default function ContactUsSlideover({
         email,
         moduleName: location,
         url: window.location.href,
-        lang: userLang,
         topic,
         message,
       });

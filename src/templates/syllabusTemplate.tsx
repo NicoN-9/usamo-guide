@@ -28,9 +28,6 @@ export const pageQuery = graphql`
           frequency
         }
         isIncomplete
-        cppOc
-        javaOc
-        pyOc
         fields {
           gitAuthorTime
         }

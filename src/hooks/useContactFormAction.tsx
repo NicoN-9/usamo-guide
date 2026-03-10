@@ -6,7 +6,7 @@ export default function useContactFormAction() {
   const currentUser = useCurrentUser();
 
   return useCallback(
-    async ({ name, email, moduleName, url, lang, topic, message }) => {
+    async ({ name, email, moduleName, url, topic, message }) => {
       if (!currentUser) {
         throw new Error('Must be logged in.');
       }
@@ -30,7 +30,6 @@ export default function useContactFormAction() {
             email,
             moduleName,
             url,
-            lang,
             topic,
             message,
           },

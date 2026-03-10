@@ -14,9 +14,6 @@ const Template: StoryFn = ({
   description,
   frequency,
   isIncomplete,
-  cppOc,
-  javaOc,
-  pyOc,
   probs,
   gitAuthorTime,
 }) => {
@@ -27,9 +24,6 @@ const Template: StoryFn = ({
     description,
     frequency,
     isIncomplete,
-    cppOc,
-    javaOc,
-    pyOc,
     probs,
     gitAuthorTime
   );
@@ -44,9 +38,6 @@ Default.args = {
   description: 'Module Description',
   frequency: 2,
   isIncomplete: false,
-  cppOc: 1,
-  javaOc: 1,
-  pyOc: 1,
   probs: [],
   gitAuthorTime: new Date('2025-01-01'),
 };

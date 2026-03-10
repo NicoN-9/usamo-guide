@@ -18,9 +18,6 @@ export class ModuleLinkInfo {
     public description?: string | null,
     public frequency?: ModuleFrequency,
     public isIncomplete?: boolean | null,
-    public cppOc: number | null = 0,
-    public javaOc: number | null = 0,
-    public pyOc: number | null = 0,
     public probs?: any,
     public gitAuthorTime?: any
   ) {
@@ -41,11 +38,7 @@ export type TOCHeading = {
   slug: string;
 };
 
-export type TableOfContents = {
-  cpp: TOCHeading[];
-  java: TOCHeading[];
-  py: TOCHeading[];
-};
+export type TableOfContents = Record<string, TOCHeading[]>;
 
 export class ModuleInfo extends ModuleLinkInfo {
   constructor(

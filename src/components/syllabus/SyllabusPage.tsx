@@ -222,9 +222,6 @@ export default function SyllabusPage({
                           item.frontmatter.description,
                           item.frontmatter.frequency as ModuleFrequency,
                           item.isIncomplete,
-                          item.cppOc,
-                          item.javaOc,
-                          item.pyOc,
                           [],
                           item.fields?.gitAuthorTime
                         )

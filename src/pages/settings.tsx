@@ -7,7 +7,6 @@ import AdminSettings from '../components/Settings/AdminSettings';
 import Authentication from '../components/Settings/Authentication';
 import DarkMode from '../components/Settings/DarkMode';
 import General from '../components/Settings/General';
-import Language from '../components/Settings/Language';
 import Profile from '../components/Settings/Profile';
 import UserData from '../components/Settings/UserData';
 import TopNavigationBar from '../components/TopNavigationBar/TopNavigationBar';
@@ -16,7 +15,6 @@ import { useUserPermissions } from '../context/UserDataContext/UserPermissionsCo
 /*
 1. General
 
-- Language
 - Dark Mode / Hide difficulty + tags / Show ignored problems & modules on dashboard
 
 2. Profile
@@ -117,7 +115,6 @@ export default function SettingsPage(props) {
                 <div className="space-y-10">
                   {tab === 'general' && (
                     <>
-                      <Language />
                       <DarkMode />
                       <General />
                     </>

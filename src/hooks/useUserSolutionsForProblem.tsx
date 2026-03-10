@@ -31,7 +31,6 @@ export default function useUserSolutionsForProblem(
       isPublic: row.is_public,
       solutionCode: row.solution_code,
       upvotes: row.upvotes ?? [],
-      language: row.language,
       timestamp: row.created_at,
     });
 

@@ -58,32 +58,32 @@ export const ResourcesFeature = (): JSX.Element => {
                         colSpan={3}
                         className={`border-b border-gray-200 bg-purple-50 px-4 py-3 text-left text-sm font-medium text-purple-500 uppercase sm:px-6 dark:border-transparent dark:bg-purple-700/25 dark:text-purple-200`}
                       >
-                        Resources
+                        Math Resources
                       </th>
                     </tr>
                   </thead>
                   {/* <tbody className="bg-white dark:bg-gray-800"> */}
                   <tbody className="table-alternating-stripes">
-                    <TableRow source="CF" title="EDU: DSU" starred>
-                      video explanation + problems for DSU
+                    <TableRow source="AoPS" title="Number Theory Basics" starred>
+                      modular arithmetic, gcd, and classic lemmas
                     </TableRow>
                     <TableRow
-                      source="CSA"
-                      title="Disjoint Data Sets"
+                      source="AoPS"
+                      title="Geometry Essentials"
                       starred
                       className="bg-gray-50 dark:bg-gray-900"
                     >
-                      both optimizations, diagrams
+                      similarity, circles, power of a point
                     </TableRow>
-                    <TableRow source="PAPS" title="11.1 - Disjoint Sets">
-                      both optimizations, no diagrams
+                    <TableRow source="MATH" title="Combinatorics Toolkit">
+                      invariants, pigeonhole, and double counting
                     </TableRow>
                     <TableRow
-                      source="CPH"
-                      title="15.2 - Union-Find"
+                      source="OLYM"
+                      title="Functional Equations"
                       className="bg-gray-50 dark:bg-gray-900"
                     >
-                      small to large, diagrams
+                      standard substitutions and symmetry tricks
                     </TableRow>
                   </tbody>
                 </table>

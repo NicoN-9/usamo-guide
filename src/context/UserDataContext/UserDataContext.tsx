@@ -8,8 +8,7 @@ import { ModuleProgress } from '../../models/module';
 import { ProblemProgress } from '../../models/problem';
 import { ResourceProgress } from '../../models/resource';
 import runMigration from './migration';
-import { Language, Theme } from './properties/simpleProperties';
-import { getLangFromUrl, updateLangURL } from './userLangQueryVariableUtils';
+import { Theme } from './properties/simpleProperties';
 import { UserPermissionsContextProvider } from './UserPermissionsContext';
 
 export type AppUser = {
@@ -72,7 +71,6 @@ export type UserData = {
     division: string;
     season: string;
   };
-  lang: Language;
   lastViewedModule: string;
   lastVisitDate: number; // timestamp
   numPageviews: number;
@@ -115,6 +113,7 @@ type UserDataContextAPI = {
 };
 
 export const assignDefaultsToUserData = (data: object): UserData => {
+  const { lang: _lang, ...rest } = data as { lang?: unknown };
   return {
     consecutiveVisits: 1,
     showTags: false,
@@ -125,7 +124,6 @@ export const assignDefaultsToUserData = (data: object): UserData => {
       division: '',
       season: '',
     },
-    lang: 'cpp',
     lastViewedModule: '',
     lastVisitDate: new Date().getTime(),
     numPageviews: 0,
@@ -136,7 +134,7 @@ export const assignDefaultsToUserData = (data: object): UserData => {
     userProgressOnProblems: {},
     userProgressOnProblemsActivity: [],
     userProgressOnResources: {},
-    ...data,
+    ...rest,
   };
 };
 
@@ -156,7 +154,7 @@ const UserDataContext = createContext<UserDataContextAPI>({
   isLoaded: true,
 });
 
-const loadLocalUserData = ({ useURLLang } = { useURLLang: true }) => {
+const loadLocalUserData = () => {
   let localStorageData: Partial<UserData>;
   try {
     localStorageData = JSON.parse(
@@ -164,13 +162,6 @@ const loadLocalUserData = ({ useURLLang } = { useURLLang: true }) => {
     );
   } catch (e) {
     localStorageData = {};
-  }
-
-  if (useURLLang) {
-    const urlLang = getLangFromUrl();
-    if (urlLang) {
-      localStorageData.lang = urlLang;
-    }
   }
 
   const actualUserData = assignDefaultsToUserData(localStorageData);
@@ -188,9 +179,6 @@ export const UserDataProvider = ({
   const [currentUser, setCurrentUser] = useState<AppUser | null>(null);
   const [userData, setUserData] = React.useReducer(
     (prevState: UserData, updates: Partial<UserData>): UserData => {
-      if (updates.lang && prevState.lang !== updates.lang) {
-        updateLangURL(updates.lang);
-      }
       if (updates.theme && prevState.theme !== updates.theme) {
         localStorage.setItem(themeKey, JSON.stringify(updates.theme));
       }
@@ -199,14 +187,11 @@ export const UserDataProvider = ({
     null,
     () => {
       // These initial values are what's used during the initial SSG render
-      return assignDefaultsToUserData({
-        lang: 'showAll',
-      });
+      return assignDefaultsToUserData({});
     }
   );
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const numPendingRemoteWritesRef = useRef(0);
-  const shouldUseLangQueryParamRef = useRef(true);
 
   // Show a message warning the user their data isn't saved
   // if they try to exit the page before sync finishes writing
@@ -326,9 +311,7 @@ export const UserDataProvider = ({
       }
 
       if (!userDataRow?.data) {
-        const localData = loadLocalUserData({
-          useURLLang: shouldUseLangQueryParamRef.current,
-        });
+        const localData = loadLocalUserData();
         await supabase.from('user_data').upsert({
           user_id: userId,
           data: localData,
@@ -337,17 +320,9 @@ export const UserDataProvider = ({
         debouncedSetUserData(localData);
       } else {
         const newUserData = assignDefaultsToUserData(userDataRow.data);
-        if (shouldUseLangQueryParamRef.current) {
-          const urlLang = getLangFromUrl();
-          if (urlLang) {
-            newUserData.lang = urlLang;
-          }
-        }
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newUserData));
         debouncedSetUserData(newUserData);
       }
-
-      shouldUseLangQueryParamRef.current = false;
       setIsLoaded(true);
     };
 
@@ -476,7 +451,7 @@ export const UserDataProvider = ({
     signOut: (): Promise<void> => {
       return supabase.auth.signOut().then(() => {
         localStorage.removeItem(LOCAL_STORAGE_KEY);
-        const localData = loadLocalUserData({ useURLLang: false });
+        const localData = loadLocalUserData();
         debouncedSetUserData(localData);
       });
     },

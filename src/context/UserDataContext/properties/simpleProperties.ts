@@ -56,28 +56,6 @@ export const useSetHideModulesSetting = createSimpleUserDataMutation(
   }
 );
 
-export type Language = 'showAll' | 'cpp' | 'java' | 'py';
-export const LANGUAGE_LABELS: { [key in Language | 'unknown']: string } = {
-  showAll: 'All',
-  cpp: 'C++',
-  java: 'Java',
-  py: 'Python',
-  unknown: 'Unknown',
-} as const;
-
-// Note: User Lang is synchronized with a URL query parameter
-// the logic to handle this synchronization is in UserDataContext.tsx
-export const useUserLangSetting = createUserDataGetter(
-  userData => userData.lang
-);
-export const useSetUserLangSetting = createSimpleUserDataMutation(
-  (userData, lang: Language) => {
-    return {
-      lang,
-    };
-  }
-);
-
 export const useDivisionTableQuery = createUserDataGetter(
   userData => userData.divisionTableQuery
 );

@@ -172,29 +172,10 @@ $\\texttt{func(var)}$
 
 **Time Complexity:** $\\mathcal{O}(N\\log^2N)$
 
-^ Format time complexity like this. Should appear outside of \`<LanguageSection>\` if it's the same for all implementations.
-
-<LanguageSection>
-
-<CPPSection>
-
-(add cpp code)
-
-</CPPSection>
-
-<PySection>
-
-(if you have Python code)
-
-</PySection>
-
-<JavaSection>
-
-(if you have Java code)
-
-</JavaSection>
-
-</LanguageSection>`,
+\`\`\`
+// add code here
+\`\`\`
+`,
       problems: '',
     };
 

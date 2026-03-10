@@ -1,15 +1,9 @@
 import { InformationCircleIcon } from '@heroicons/react/outline';
-import classNames from 'classnames';
 import { useAtomValue, useSetAtom } from 'jotai';
 import React from 'react';
 import { activeFileAtom, saveFileAtom } from '../../atoms/editor';
 import { useDarkMode } from '../../context/DarkModeContext';
-import {
-  LANGUAGE_LABELS,
-  useSetThemeSetting,
-  useSetUserLangSetting,
-  useUserLangSetting,
-} from '../../context/UserDataContext/properties/simpleProperties';
+import { useSetThemeSetting } from '../../context/UserDataContext/properties/simpleProperties';
 import LogoSquare from '../LogoSquare';
 import { fetchFileContent } from './editorUtils';
 
@@ -17,8 +11,6 @@ export const EditorTopNav = (): JSX.Element => {
   const activeFile = useAtomValue(activeFileAtom);
   const saveFile = useSetAtom(saveFileAtom);
   const isDarkMode = useDarkMode();
-  const userLang = useUserLangSetting();
-  const setUserLang = useSetUserLangSetting();
   const setTheme = useSetThemeSetting();
 
   const handleReloadContent = async () => {
@@ -67,25 +59,6 @@ export const EditorTopNav = (): JSX.Element => {
         )}
       </div>
       <div className="flex items-center">
-        <nav className="flex space-x-1" aria-label="Tabs">
-          {(['cpp', 'java', 'py'] as const).map(tab => (
-            <button
-              key={tab}
-              className={classNames(
-                tab === userLang
-                  ? 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300'
-                  : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300',
-                'rounded-md px-3 py-2 text-sm font-medium transition focus:outline-hidden'
-              )}
-              onClick={() => setUserLang(tab)}
-            >
-              {LANGUAGE_LABELS[tab]}
-            </button>
-          ))}
-        </nav>
-
-        <div className="mx-4 block h-6 self-center border-l border-gray-200 dark:border-gray-700" />
-
         <a
           href="https://github.com/usamoguide/usamo-guide/blob/main/docs/Math_Topic_Template.md"
           target="_blank"

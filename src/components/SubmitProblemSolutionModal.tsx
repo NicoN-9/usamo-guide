@@ -6,10 +6,8 @@ import {
 } from '@headlessui/react';
 import className from 'classnames';
 import * as React from 'react';
-import { LANGUAGE_LABELS } from '../context/UserDataContext/properties/simpleProperties';
 import useUserProblemSolutionActions from '../hooks/useUserProblemSolutionActions';
 import { ShortProblemInfo } from '../models/problem';
-import ButtonGroup from './ButtonGroup';
 import TabIndentableTextarea from './elements/TabIndentableTextarea';
 
 export default function SubmitProblemSolutionModal({
@@ -22,9 +20,6 @@ export default function SubmitProblemSolutionModal({
   problem: ShortProblemInfo;
 }) {
   const [solutionCode, setSolutionCode] = React.useState('');
-  const [codeLang, setCodeLang] = React.useState<'cpp' | 'java' | 'py' | null>(
-    null
-  );
   const [isCodePublic, setIsCodePublic] = React.useState(true);
   const [loading, setLoading] = React.useState(false);
   const [showSuccess, setShowSuccess] = React.useState(false);
@@ -34,7 +29,6 @@ export default function SubmitProblemSolutionModal({
     if (isOpen) {
       setSolutionCode('');
       setIsCodePublic(true);
-      setCodeLang(null);
       setLoading(false);
       setShowSuccess(false);
     }
@@ -47,17 +41,11 @@ export default function SubmitProblemSolutionModal({
       alert('Your solution seems too short!');
       return;
     }
-    if (!codeLang) {
-      alert('Please select a language.');
-      return;
-    }
-
     setLoading(true);
     submitAction({
       isPublic: isCodePublic,
       solutionCode,
       problemID: problem.uniqueId,
-      language: codeLang,
     })
       .then(() => setShowSuccess(true))
       .catch(e => alert('Error: ' + e.message))
@@ -84,13 +72,6 @@ export default function SubmitProblemSolutionModal({
               </li>
             </ol>
           </p>
-          <ButtonGroup
-            options={['cpp', 'java', 'py']}
-            labelMap={LANGUAGE_LABELS}
-            value={codeLang}
-            onChange={x => setCodeLang(x)}
-          />
-
           <div className="mt-3 rounded-md shadow-sm">
             <TabIndentableTextarea
               rows={10}

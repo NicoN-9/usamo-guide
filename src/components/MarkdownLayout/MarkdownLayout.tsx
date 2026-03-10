@@ -10,7 +10,6 @@ import { ContactUsSlideoverProvider } from '../../context/ContactUsSlideoverCont
 import MarkdownLayoutContext from '../../context/MarkdownLayoutContext';
 import { ProblemSolutionContext } from '../../context/ProblemSolutionContext';
 import { ProblemSuggestionModalProvider } from '../../context/ProblemSuggestionModalContext';
-import { useUserLangSetting } from '../../context/UserDataContext/properties/simpleProperties';
 import {
   useSetProgressOnModule,
   useUserProgressOnModules,
@@ -30,7 +29,7 @@ import TableOfContentsSidebar from './TableOfContents/TableOfContentsSidebar';
 
 const ContentContainer = ({ children, tableOfContents }) => (
   <main
-    className="relative overflow-x-hidden pt-6 focus:outline-hidden lg:pt-2"
+    className="relative overflow-x-hidden pt-6 focus:outline-hidden lg:pt-2 2xl:h-screen 2xl:overflow-hidden"
     tabIndex={0}
   >
     <div className="mx-auto">
@@ -40,12 +39,10 @@ const ContentContainer = ({ children, tableOfContents }) => (
           className="order-1 hidden shrink-0 lg:block"
           style={{ width: '20rem' }}
         />
-        {tableOfContents.length > 1 && (
-          <div className="order-3 mt-48 mr-6 ml-6 hidden w-64 shrink-0 2xl:block">
-            <TableOfContentsSidebar tableOfContents={tableOfContents} />
-          </div>
-        )}
-        <div className="order-2 w-0 max-w-4xl min-w-0 flex-1 overflow-x-auto px-4 sm:px-6 lg:px-8">
+        <div className="order-3 mt-48 mr-6 ml-6 hidden w-64 shrink-0 2xl:block">
+          <TableOfContentsSidebar tableOfContents={tableOfContents} />
+        </div>
+        <div className="order-2 w-0 max-w-4xl min-w-0 flex-1 overflow-x-auto px-4 sm:px-6 lg:px-8 2xl:max-h-screen 2xl:overflow-y-auto">
           <div className="hidden lg:block">
             <NavBar />
             <div className="h-8" />
@@ -71,15 +68,19 @@ export default function MarkdownLayout({
 }) {
   const userProgressOnModules = useUserProgressOnModules();
   const setModuleProgress = useSetProgressOnModule();
-  const lang = useUserLangSetting();
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const moduleProgress =
     (userProgressOnModules && userProgressOnModules[markdownData.id]) ||
     'Not Started';
 
+  const tocEntries = markdownData.toc ?? {};
   const tableOfContents =
-    lang in markdownData.toc ? markdownData.toc[lang] : markdownData.toc['cpp'];
+    tocEntries.cpp ||
+    tocEntries.java ||
+    tocEntries.py ||
+    Object.values(tocEntries)[0] ||
+    [];
 
   const data = useStaticQuery(graphql`
     query {
