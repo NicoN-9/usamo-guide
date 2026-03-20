@@ -1,6 +1,6 @@
 ---
 id: pascals-triangle-binomial-theorem
-title: Pascal's Triangle & Binomial Theorem 1 
+title: Pascal's Triangle & Binomial Theorem 
 author: USAMO Guide Team
 description: Pascal's triangle structure and its symmetry, hockey stick identity, and basic binomial expansion.
 prerequisites: [counting-fundamentals]
@@ -13,10 +13,10 @@ $(a+b)^n$. These are both fast ways to compute counting problems, identify patte
  
 ## Key Ideas
  
-- The $n$th row of Pascal's triangle lists $\binom{n}{0}, \binom{n}{1}, \ldots, \binom{n}{n}, in symmetry. 
+- The $n$th row of Pascal's triangle lists $\binom{n}{0}, \binom{n}{1}, \ldots, \binom{n}{n}$, in symmetry.
 - Pascal's identity: $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$.
 - Symmetry from the Pascal Triangle forms $\binom{n}{k} = \binom{n}{n-k}$.
-- Sume of rows $\binom{n}{0} + \binom{n}{1} + \cdots + \binom{n}{n} = 2^n$.
+- Sum of rows $\binom{n}{0} + \binom{n}{1} + \cdots + \binom{n}{n} = 2^n$.
 - The hockey stick identity: $\binom{r}{r} + \binom{r+1}{r} + \cdots + \binom{n}{r} = \binom{n+1}{r+1}$.
 - Binomial theorem: $(a+b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k$.
 - To find a specific coefficient in $(a+b)^n$, $\binom{n}{k} a^{n-k} b^k$ shows the general term.
@@ -28,13 +28,15 @@ $(a+b)^n$. These are both fast ways to compute counting problems, identify patte
 First, what is the Pascal's Triangle and why is it so important? Each entry is the sum of the two entries directly above it. Row 0 starts with
 just 1. Writing out a few rows, we get 
  
-$$\begin{array}{ccccccccc}
+$$
+\begin{array}{ccccccccc}
 & & & & 1 & & & & \\
 & & & 1 & & 1 & & & \\
 & & 1 & & 2 & & 1 & & \\
 & 1 & & 3 & & 3 & & 1 & \\
 1 & & 4 & & 6 & & 4 & & 1
-\end{array}$$
+\end{array}
+$$
  
 Row $n$ has $n+1$ entries, and the $k$th entry (starting from $k=0$) is
 $\binom{n}{k}$. This comes from Pascal's identity, to choose $k$ items from $n$,
@@ -62,7 +64,7 @@ $$\sum_{i=r}^{n} \binom{i}{r} = \binom{n+1}{r+1}.$$
  
 On the triangle, if one starts at any $\binom{r}{r} = 1$ on the diagonal and sum
 diagonally downward, the result is the entry one step down and one step right.
-People call it the "hockey stick identity because the shape traced looks like a hockey stick.
+People call it the "hockey stick identity" because the shape traced looks like a hockey stick.
  
 ### Binomial Theorem/Expansion 
  
@@ -73,7 +75,7 @@ factors contribute a $b$ (and the rest contribute an $a$). The coefficient of
 $a^{n-k} b^k$ is exactly $\binom{n}{k}$. This can be shown on the Pascal Triangle directly. 
  
 To find a specific term, identify the $k$ that gives the powers that we want, and then 
-compute $\binom{n}{k} a^{n-k} b^k$ directly> Hence we see that there is no need to expand everything.
+compute $\binom{n}{k} a^{n-k} b^k$ directly. Hence we see that there is no need to expand everything.
  
 ### Substitution Tricks
  
