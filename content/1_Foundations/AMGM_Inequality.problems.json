@@ -1,4 +1,41 @@
 {
   "MODULE_ID": "amgm-inequality",
-  "practice": []
+  "practice": [
+  {
+    "uniqueId": "2023-amc12a-23",
+    "name": "Problem 23 (2023 AMC 12A)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_23",
+    "source": "AMC 12A",
+    "difficulty": "",
+    "isStarred": false,
+    "tags": [],
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "2016-amc12b-14",
+    "name": "Problem 14 (2016 AMC 12B)",
+    "url": "https://artofproblemsolving.com/wiki/index.php?title=2016_AMC_12B_Problems/Problem_14",
+    "source": "AMC 12B",
+    "difficulty": "",
+    "isStarred": false,
+    "tags": [],
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "1965-ahsme-34",
+    "name": "Problem 34 (1965 AHSME)",
+    "url": "https://artofproblemsolving.com/wiki/index.php?title=1965_AHSME_Problems/Problem_34",
+    "source": "AHSME",
+    "difficulty": "",
+    "isStarred": false,
+    "tags": [],
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  }
+]
 }
