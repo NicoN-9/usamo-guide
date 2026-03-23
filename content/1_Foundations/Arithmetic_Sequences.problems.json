@@ -1,4 +1,85 @@
 {
   "MODULE_ID": "arithmetic-sequences",
-  "practice": []
+  "practice": [
+  {
+    "uniqueId": "amc8-2026-18",
+    "name": "Problem 18 (2026 AMC 8)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2026_AMC_8_Problems/Problem_18",
+    "source": "AMC 8",
+    "difficulty": "Medium",
+    "isStarred": false,
+    "tags": [
+      "Number Theory",
+      "Consecutive Integers"
+    ],
+    "statement": "How many ways can 60 be written as a sum of at least two consecutive positive even integers?",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "amc8-2015-18",
+    "name": "Problem 18 (2015 AMC 8)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2015_AMC_8_Problems/Problem_18",
+    "source": "AMC 8",
+    "difficulty": "Medium",
+    "isStarred": false,
+    "tags": [
+      "Probability",
+      "Counting"
+    ],
+    "statement": "The product of the two 2-digit numbers is even. What is the probability that both numbers are odd?",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "amc10-2005a-17",
+    "name": "Problem 17 (2005 AMC 10A)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2005_AMC_10A_Problems/Problem_17",
+    "source": "AMC 10",
+    "difficulty": "Medium",
+    "isStarred": false,
+    "tags": [
+      "Arithmetic Sequence",
+      "Geometry"
+    ],
+    "statement": "In the five-sided star shown, the letters $A, B, C, D,$ and $E$ are replaced by the numbers $3, 5, 6, 7,$ and $9$, although not necessarily in this order. The sums of the numbers at the ends of the line segments $AB, BC, CD, DE,$ and $EA$ form an arithmetic sequence, although not necessarily in this order. What is the middle term of the sequence?",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "amc10-2023b-23",
+    "name": "Problem 23 (2023 AMC 10B)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2023_AMC_10B_Problems/Problem_23",
+    "source": "AMC 10",
+    "difficulty": "Hard",
+    "isStarred": false,
+    "tags": [
+      "Algebra",
+      "Number Theory"
+    ],
+    "statement": "The sum of $n$ terms of an arithmetic progression is $221$. If the first term is $a$ and the common difference is $d$, what is $a+d+n$?",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "amc10-2024a-21",
+    "name": "Problem 21 (2024 AMC 10A)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2024_AMC_10A_Problems/Problem_21",
+    "source": "AMC 10",
+    "difficulty": "Hard",
+    "isStarred": false,
+    "tags": [
+      "Arithmetic Progression",
+      "Algebra"
+    ],
+    "statement": "The numbers, in order, of each row and the numbers, in order, of each column of a $5 \times 5$ array of integers form an arithmetic progression of length $5$. The numbers in positions $(5,5), (2,4), (4,3),$ and $(3,1)$ are $0, 48, 16,$ and $12$, respectively. What number is in position $(1,2)$?",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  }
+]
 }
