@@ -1,4 +1,56 @@
 {
-  "MODULE_ID": "polynomial-manipulations",
-  "practice": []
+  "MODULE_ID": "polynomial-manipulation",
+  "practice": [
+    {
+      "uniqueId": "ahsme-1963-14",
+      "name": "Problem 14 (1963 AHSME)",
+      "url": "https://artofproblemsolving.com/wiki/index.php?title=1963_AHSME_Problems/Problem_14",
+      "source": "AMC 12",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Polynomial Manipulation",
+        "Vieta's Formulas",
+        "Quadratics"
+      ],
+      "statement": "Consider the equations $x^2 + kx + 6 = 0$ and $x^2 - kx + 6 = 0$. If, when the roots of the equations are suitably listed, each root of the second equation is $5$ more than the corresponding root of the first equation, then $k$ equals",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "amc10a-2003-18",
+      "name": "Problem 18 (2003 AMC 10A)",
+      "url": "https://artofproblemsolving.com/wiki/index.php?title=2003_AMC_10A_Problems/Problem_18",
+      "source": "AMC 10",
+      "difficulty": "Hard",
+      "isStarred": false,
+      "tags": [
+        "Polynomial Manipulation",
+        "Vieta's Formulas",
+        "Reciprocals of Roots"
+      ],
+      "statement": "What is the sum of the reciprocals of the roots of the equation $\\dfrac{2003}{2004}x + 1 + \\dfrac{1}{x} = 0$?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "amc10a-2019-24",
+      "name": "Problem 24 (2019 AMC 10A)",
+      "url": "https://artofproblemsolving.com/wiki/index.php?title=2019_AMC_10A_Problems/Problem_24",
+      "source": "AMC 10",
+      "difficulty": "Hard",
+      "isStarred": false,
+      "tags": [
+        "Polynomial Manipulation",
+        "Partial Fractions",
+        "Vieta's Formulas"
+      ],
+      "statement": "Let $p$, $q$, and $r$ be the distinct roots of the polynomial $x^3 - 22x^2 + 80x - 67$. It is given that there exist real numbers $A$, $B$, and $C$ such that $$\\frac{1}{s^3 - 22s^2 + 80s - 67} = \\frac{A}{s-p} + \\frac{B}{s-q} + \\frac{C}{s-r}$$ for all $s \\notin \\{p, q, r\\}$. What is $\\dfrac{1}{A} + \\dfrac{1}{B} + \\dfrac{1}{C}$?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    }
+  ]
 }
