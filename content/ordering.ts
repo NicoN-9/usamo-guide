@@ -43,6 +43,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
         'polynomial-manipulations',
         'symmetric-identity',
         'vieta-jumping',
+        'functional-equations',
       ],
     },
     {
@@ -61,7 +62,13 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Counting Fundamentals',
-      items: ['counting-fundamentals', 'pascals-triangle-binomial-theorem', 'inclusion-exclusion','stars-and-bars'],
+      items: [
+        'counting-fundamentals',
+        'pascals-triangle-binomial-theorem',
+        'inclusion-exclusion',
+        'pigeonhole-principles',
+        'stars-and-bars',
+      ],
     },
     {
       name: 'Geometry Basics',
@@ -104,7 +111,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Functional Equations',
-      items: ['functional-equations-intro', 'functional-equations'],
+      items: ['functional-equations-intro'],
     },
     {
       name: 'Counting & Casework',

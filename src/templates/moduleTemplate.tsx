@@ -1,15 +1,19 @@
-import { graphql } from 'gatsby';
+import { graphql, navigate } from 'gatsby';
 import * as React from 'react';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { SECTION_LABELS } from '../../content/ordering';
+import { ContentAccessModal } from '../components/ContentAccessModal';
 import Layout from '../components/layout';
 import Markdown from '../components/markdown/Markdown';
 import MarkdownLayout from '../components/MarkdownLayout/MarkdownLayout';
 import SEO from '../components/seo';
 import { ConfettiProvider } from '../context/ConfettiContext';
 import { MarkdownProblemListsProvider } from '../context/MarkdownProblemListsContext';
-import { useIsUserDataLoaded } from '../context/UserDataContext/UserDataContext';
+import {
+  useCurrentUser,
+  useIsUserDataLoaded,
+} from '../context/UserDataContext/UserDataContext';
 import { graphqlToModuleInfo } from '../utils/utils';
 
 export default function Template(props): JSX.Element {
@@ -17,6 +21,10 @@ export default function Template(props): JSX.Element {
   const { body } = xdm;
   const module = React.useMemo(() => graphqlToModuleInfo(xdm), [xdm]);
   const isLoaded = useIsUserDataLoaded();
+  const currentUser = useCurrentUser();
+  const [isAccessModalDismissed, setIsAccessModalDismissed] = React.useState(false);
+  const isContentLocked = !currentUser;
+  const showContentAccessModal = isLoaded && isContentLocked && !isAccessModalDismissed;
 
   useEffect(() => {
     // source: https://miguelpiedrafita.com/snippets/scrollToHash
@@ -68,17 +76,51 @@ export default function Template(props): JSX.Element {
         `}</script>
       </Helmet>
 
-      <ConfettiProvider>
-        <MarkdownProblemListsProvider
-          value={moduleProblemLists?.problemLists || []}
-        >
-          <MarkdownLayout markdownData={module}>
-            <div className="py-4">
-              <Markdown body={body} />
-            </div>
-          </MarkdownLayout>
-        </MarkdownProblemListsProvider>
-      </ConfettiProvider>
+      <div className="relative overflow-hidden bg-gradient-to-b from-orange-50 via-amber-50 to-white dark:from-[#140f0a] dark:via-[#1a1004] dark:to-[#0f172a]">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.18] [mask-image:radial-gradient(ellipse_at_center,white_20%,transparent_75%)]"
+          style={{ backgroundImage: "url('/images/math-doodles.png')" }}
+        />
+        <div className="pointer-events-none absolute inset-0">
+          <svg className="h-full w-full opacity-[0.12] dark:opacity-[0.2]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="module-grid-pattern" width="50" height="50" patternUnits="userSpaceOnUse">
+                <path
+                  d="M 50 0 L 0 0 0 50"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  className="text-orange-400/60 dark:text-orange-500/80"
+                />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#module-grid-pattern)" />
+          </svg>
+        </div>
+
+        <div className={isContentLocked ? 'pointer-events-none select-none blur-[4px]' : ''}>
+          <ConfettiProvider>
+            <MarkdownProblemListsProvider
+              value={moduleProblemLists?.problemLists || []}
+            >
+              <MarkdownLayout markdownData={module}>
+                <div className="py-4">
+                  <Markdown body={body} />
+                </div>
+              </MarkdownLayout>
+            </MarkdownProblemListsProvider>
+          </ConfettiProvider>
+        </div>
+      </div>
+
+      <ContentAccessModal
+        isOpen={showContentAccessModal}
+        sectionLabel={SECTION_LABELS[module.section]}
+        onClose={() => {
+          setIsAccessModalDismissed(true);
+          navigate(`/${module.section}`);
+        }}
+      />
     </Layout>
   );
 }

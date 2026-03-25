@@ -8,19 +8,19 @@ import ModuleFrequencyDots from '../MarkdownLayout/ModuleFrequencyDots';
 import Tooltip from '../Tooltip/Tooltip';
 
 const FrequencyCircleColors = [
-  'group-hover:text-red-600 dark:group-hover:text-red-400',
-  'group-hover:text-orange-600 dark:group-hover:text-orange-400',
-  'group-hover:text-yellow-600 dark:group-hover:text-yellow-400',
-  'group-hover:text-teal-600 dark:group-hover:text-teal-400',
-  'group-hover:text-green-600 dark:group-hover:text-green-400',
+  'group-hover:text-orange-500 dark:group-hover:text-orange-400',
+  'group-hover:text-amber-500 dark:group-hover:text-amber-400',
+  'group-hover:text-yellow-500 dark:group-hover:text-yellow-400',
+  'group-hover:text-sky-500 dark:group-hover:text-sky-400',
+  'group-hover:text-blue-500 dark:group-hover:text-blue-400',
 ];
 
 const FrequencyTextColors = [
-  'group-hover:text-red-700 dark:group-hover:text-red-400',
   'group-hover:text-orange-700 dark:group-hover:text-orange-400',
+  'group-hover:text-amber-700 dark:group-hover:text-amber-400',
   'group-hover:text-yellow-700 dark:group-hover:text-yellow-400',
-  'group-hover:text-teal-700 dark:group-hover:text-teal-400',
-  'group-hover:text-green-700 dark:group-hover:text-green-400',
+  'group-hover:text-sky-700 dark:group-hover:text-sky-400',
+  'group-hover:text-blue-700 dark:group-hover:text-blue-400',
 ];
 
 // https://stackoverflow.com/questions/3177836/how-to-format-time-since-xxx-e-g-4-minutes-ago-similar-to-stack-exchange-site
@@ -112,7 +112,7 @@ const ModuleLink = ({ link }: { link: ModuleLinkInfo }): JSX.Element => {
               progress === 'Ignored'
                 ? 'text-gray-400 dark:text-gray-600'
                 : 'text-gray-700 dark:text-gray-400'
-            } dark:group-hover:text-dark-high-emphasis mb-1 flex items-center transition group-hover:text-blue-800`}
+            } dark:group-hover:text-dark-high-emphasis mb-1 flex items-center transition group-hover:text-orange-700`}
           >
             <span className="mr-2 inline-flex items-end">
               {link.title}{' '}
@@ -158,7 +158,7 @@ const ModuleLink = ({ link }: { link: ModuleLinkInfo }): JSX.Element => {
             </p>
           )}
           {/* https://stackoverflow.com/questions/9229213/convert-iso-date-to-milliseconds-in-javascript */}
-          <p className="dark:group-hover:text-dark-high-emphasis block text-sm leading-5 text-gray-400 transition group-hover:text-blue-700">
+          <p className="dark:group-hover:text-dark-high-emphasis block text-sm leading-5 text-gray-400 transition group-hover:text-sky-700">
             {link.description}
 
             <i>
