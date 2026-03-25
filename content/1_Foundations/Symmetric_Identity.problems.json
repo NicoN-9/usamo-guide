@@ -1,4 +1,57 @@
 {
   "MODULE_ID": "symmetric-identity",
-  "practice": []
+  "practice": [
+    {
+      "uniqueId": "aime1-2010-9",
+      "name": "Problem 9 (2010 AIME I)",
+      "url": "https://artofproblemsolving.com/wiki/index.php/2010_AIME_I_Problems/Problem_9",
+      "source": "AIME",
+      "difficulty": "Hard",
+      "isStarred": false,
+      "tags": [
+        "Symmetric Cubic Identity",
+        "Systems of Equations",
+        "Vieta's Formulas"
+      ],
+      "statement": "Let $(a, b, c)$ be a real solution of the system of equations\n\\begin{align*} x^3 - xyz &= 2 \\\\ y^3 - xyz &= 6 \\\\ z^3 - xyz &= 20 \\end{align*}\nThe greatest possible value of $a^3 + b^3 + c^3$ can be written in the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n$.",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "ahsme-1966-10",
+      "name": "Problem 10 (1966 AHSME)",
+      "url": "https://artofproblemsolving.com/wiki/index.php/1966_AHSME_Problems/Problem_10",
+      "source": "AHSME",
+      "difficulty": "Easy",
+      "isStarred": false,
+      "tags": [
+        "Symmetric Cubic Identity",
+        "Arithmetic Mean",
+        "Geometric Mean",
+        "Vieta's Formulas"
+      ],
+      "statement": "If the arithmetic mean of two numbers is $6$ and their geometric mean is $10$, then an equation with the given two numbers as roots is:",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "ahsme-1999-30",
+      "name": "Problem 30 (1999 AHSME)",
+      "url": "https://artofproblemsolving.com/wiki/index.php/1999_AHSME_Problems/Problem_30",
+      "source": "AHSME",
+      "difficulty": "Hard",
+      "isStarred": false,
+      "tags": [
+        "Symmetric Cubic Identity",
+        "Sum of Cubes",
+        "Number Theory"
+      ],
+      "statement": "The number of ordered pairs of integers $(m, n)$ for which $mn \\geq 0$ and\n$$m^3 + n^3 + 99mn = 33^3$$\nis equal to",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    }
+  ]
 }
