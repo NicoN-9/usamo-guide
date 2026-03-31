@@ -238,7 +238,7 @@ export default function IndexPage({ path }): JSX.Element {
         </svg>
       </div>
       <div className="relative bg-gradient-to-b from-white via-orange-100 to-orange-50 dark:bg-gradient-to-b dark:from-[#2a1208] dark:via-[#e85d04]/20 dark:to-[#e85d04]/30 transition-colors duration-500">
-        {/* Stars System Section */}
+        {/* Stars System Section 
         <div className="pt-16 md:pt-24">
           <div className={containerClasses}>
             <h2 className="justify-center items-center mx-auto flex flex-col text-6xl font-bold pb-3 dark:text-orange-50/90">
@@ -258,7 +258,7 @@ export default function IndexPage({ path }): JSX.Element {
               </div>
             </div>
           </div>
-        </div>
+        </div>*/}
         <div className="pointer-events-none absolute inset-0 z-0">
           <div className="absolute inset-0 z-0 [mask-image:radial-gradient(ellipse_at_center,white_20%,transparent_75%)]">
             <svg
