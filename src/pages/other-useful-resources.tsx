@@ -43,18 +43,27 @@ const RESOURCES: TopicResources[] = [
         href: 'https://artofproblemsolving.com/school/course/intermediatecounting',
         description:
           'Structured lessons and practice for permutations, combinations, and bijections.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Notebook with counting notes and a pen on a desk.',
       },
       {
         name: 'Yufei Zhao - Enumerative Combinatorics Notes',
         href: 'https://yufeizhao.com/olympiad/',
         description:
           'High-quality olympiad notes with clear combinatorial arguments and examples.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Open book and notes representing advanced combinatorics study.',
       },
       {
         name: 'Brilliant - Combinatorics Wiki',
         href: 'https://brilliant.org/wiki/combinatorics/',
         description:
           'Quick refreshers and concept overviews for counting fundamentals and beyond.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Handwritten combinatorics formulas and symbols on paper.',
       },
     ],
   },
@@ -72,18 +81,27 @@ const RESOURCES: TopicResources[] = [
         href: 'https://artofproblemsolving.com/school/course/intermediatealgebra',
         description:
           'Strong foundation for transformations, equations, and contest-level manipulations.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1509869175650-a1d97972541a?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Math notebook with algebraic expressions.',
       },
       {
         name: 'Cut-the-Knot Algebra Collection',
         href: 'https://www.cut-the-knot.org/algebra.shtml',
         description:
           'A deep archive of algebra techniques, identities, and problem discussions.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1635070041409-e63e783ce3c1?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Close-up of algebra equations written on a chalkboard.',
       },
       {
         name: 'IMOmath - Functional Equations',
         href: 'https://imomath.com/index.cgi?page=problemsFunctionalEquations',
         description:
           'Olympiad-style functional equation problems sorted for focused practice.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Equation-filled page highlighting functional equation work.',
       },
     ],
   },
@@ -101,18 +119,27 @@ const RESOURCES: TopicResources[] = [
         href: 'https://web.evanchen.cc/geombook.html',
         description:
           'One of the best references for olympiad geometry with modern techniques.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Geometric diagram sketches and study notes.',
       },
       {
         name: 'AoPS Intro/Intermediate Geometry',
         href: 'https://artofproblemsolving.com/school/course/introductiongeometry',
         description:
           'Progressive geometry curriculum from foundational theorems to hard problems.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Student materials for geometry practice on a desk.',
       },
       {
         name: 'Geometry Revisited (Coxeter-Greitzer)',
         href: 'https://archive.org/details/geometryrevisite0000coxe',
         description:
           'Classic book that builds geometric intuition and proof-writing habits.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1456518563096-0ff5ee08204e?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Classic textbook and notebook used for geometry learning.',
       },
     ],
   },
@@ -130,18 +157,27 @@ const RESOURCES: TopicResources[] = [
         href: 'https://artofproblemsolving.com/school/course/numbertheory',
         description:
           'A systematic path through foundational and advanced contest number theory.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Notebook with number sequences and arithmetic notes.',
       },
       {
         name: 'Paul Zeitz - Number Theory Handouts',
         href: 'https://web.evanchen.cc/handouts/ZeitzNT/ZeitzNT.pdf',
         description:
           'Excellent olympiad-focused problems and classic methods in one place.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Printed handouts and annotated number theory solutions.',
       },
       {
         name: 'Brilliant - Number Theory Wiki',
         href: 'https://brilliant.org/wiki/number-theory/',
         description:
           'Useful concept summaries for quick recall and revision.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Study setup with number theory references and notes.',
       },
     ],
   },
@@ -159,18 +195,27 @@ const RESOURCES: TopicResources[] = [
         href: 'https://artofproblemsolving.com/wiki/index.php/AMC_Problems_and_Solutions',
         description:
           'Official statements, community solutions, and historical contest collections.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Organized contest prep notes and planning documents.',
       },
       {
         name: 'MAA Competitions',
         href: 'https://www.maa.org/math-competitions',
         description:
           'Contest logistics, dates, and official pages for US competition programs.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Calendar and notebook for competition scheduling.',
       },
       {
         name: 'IMO Official Site - Problem Archive',
         href: 'https://www.imo-official.org/problems.aspx',
         description:
           'International Olympiad problems for stretching proof and strategy skills.',
+        imageSrc:
+          'https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&w=1280&q=80',
+        imageAlt: 'Olympiad-style problem sheets laid out for training.',
       },
     ],
   },
@@ -195,13 +240,13 @@ function ResourceCard({
   return (
     <article className="overflow-hidden rounded-2xl border border-orange-200/60 bg-white/85 shadow-sm backdrop-blur-sm dark:border-orange-900/70 dark:bg-gray-900/60">
       <div
-        className={`grid items-stretch lg:grid-cols-2 ${reverse ? 'lg:[&>*:first-child]:order-2' : ''}`}
+        className={`grid items-start lg:grid-cols-2 ${reverse ? 'lg:[&>*:first-child]:order-2' : ''}`}
       >
-        <div className="relative min-h-[220px] lg:min-h-[320px]">
+        <div className="relative h-56 sm:h-64 lg:h-80 xl:h-[360px] max-h-[380px]">
           <img
             src={imageSrc}
             alt={imageAlt}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-center"
             loading="lazy"
           />
           <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/45 via-black/15 to-transparent" />
