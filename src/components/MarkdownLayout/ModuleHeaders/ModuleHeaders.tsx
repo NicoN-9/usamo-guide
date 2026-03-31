@@ -98,7 +98,7 @@ export default function ModuleHeaders({
           )}
         <div className="mb-4 sm:flex sm:items-center sm:justify-between">
           <div className="min-w-0 flex-1">
-            <h1 className="dark:text-dark-high-emphasis text-2xl font-bold text-gray-900 sm:text-3xl -mt-2">
+            <h1 className="dark:text-dark-high-emphasis text-2xl font-bold text-gray-900 sm:text-3xl">
               {markdownData.title}
             </h1>
             {markdownData.author && (

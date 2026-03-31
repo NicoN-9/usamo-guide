@@ -412,7 +412,7 @@ export default function IndexPage({ path }): JSX.Element {
                 </p>
                 <div className="h-7 md:h-9"></div>
                 <a
-                  href="https://docs.google.com/document/d/13QpXqdiYQwjBLnywGL1FUG7GFdh8SM_1NigIkJl-A7k/edit?usp=sharing"
+                  href="https://docs.google.com/document/d/1AUNOq6OlVcSZN_gUPfvyhimlh9hA4GNvNaLdzyflX_8/edit?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                   className="shine-effect inline-flex items-center rounded-full border-orange-600 bg-linear-to-br from-orange-300 to-orange-400 px-7 py-3 text-base font-bold text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(251,146,60,0.4)]"
@@ -422,12 +422,11 @@ export default function IndexPage({ path }): JSX.Element {
               </div>
               <div className="lg:col-span-5">
                 <div className="overflow-hidden rounded-2xl border border-orange-200/70 bg-white/70 shadow-sm dark:border-orange-500/20 dark:bg-[#15100c]/65">
-                  <StaticImage
-                    src="../assets/banner-image-big.png"
+                  <img
+                    src="/images/builders.png"
                     alt="USAMO Guide team collaboration"
-                    placeholder="blurred"
-                    layout="constrained"
                     className="w-full"
+                    loading="lazy"
                   />
                 </div>
               </div>

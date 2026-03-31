@@ -27,7 +27,7 @@ const indexName = `${process.env.GATSBY_ALGOLIA_INDEX_NAME ?? 'dev'}_problems`;
 
 // Style constants aligned with homepage
 const pageBackgroundClasses = 'min-h-screen bg-gray-50 dark:bg-gradient-to-b dark:from-black dark:via-black dark:to-[#1a0d00] transition-colors duration-500';
-const heroCardClasses = 'relative overflow-hidden rounded-3xl bg-gradient-to-r from-orange-100 via-white to-orange-100 p-8 shadow-xl transition-all duration-500 dark:from-orange-900 dark:via-orange-800 dark:to-orange-900 dark:shadow-[0_12px_40px_rgba(8,18,40,0.65)]';
+const heroCardClasses = 'relative overflow-hidden rounded-3xl p-8 shadow-xl transition-all duration-500 dark:shadow-[0_12px_40px_rgba(8,18,40,0.65)]';
 const toolbarCardClasses = 'mb-5 rounded-2xl bg-gradient-to-r from-slate-100 to-blue-50 p-4 shadow-lg dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-800';
 
 type DataProps = {
@@ -113,10 +113,19 @@ export default function ProblemsPage(props: PageProps<DataProps>) {
               <TagsRefinementList />
             </aside>
             <main className="col-span-12 sm:col-span-8 md:col-span-9 lg:col-span-10 xl:col-span-10">
-              <div className={heroCardClasses}>
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(251,146,60,0.15),transparent_35%),radial-gradient(circle_at_85%_85%,rgba(251,146,60,0.1),transparent_40%)]" />
+              <div
+                className={heroCardClasses}
+                style={{
+                  backgroundImage:
+                    "linear-gradient(180deg, rgba(129, 41, 8, 0.18) 0%, rgba(129, 41, 8, 0.32) 100%), url('/images/Untitled_design.png')",
+                  backgroundPosition: 'left bottom',
+                  backgroundSize: '100% auto',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              >
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_78%,rgba(255,255,255,0.18),transparent_20%),linear-gradient(180deg,rgba(92,27,5,0.08),rgba(92,27,5,0.28))]" />
                 <div className="relative mx-auto mb-6 max-w-3xl">
-                  <h1 className="dark:text-dark-high-emphasis mb-6 text-center text-3xl font-bold text-gray-900 sm:text-5xl dark:text-white">
+                  <h1 className="dark:text-dark-high-emphasis mb-6 text-center text-3xl font-bold text-white sm:text-5xl dark:text-white">
                     Problems
                   </h1>
                   <div className="mx-auto max-w-md">

@@ -12,46 +12,25 @@ const subtextClasses =
 
 const projects = [
   {
-    title: "Weekly Problem Sessions",
+    title: "Weekly Mock Contests",
     icon: CalendarCheck,
     color: "from-fuchsia-500 to-purple-600",
     desc: "Join guided sessions focused on problem solving, solution writing, and proof critique. Led by top performers to help you master competition-level rigor.",
-    url: "/groups",
+    url: "https://contests.usamoguide.com/",
     widget: <ContestWidget/>
-  },
-  {
-    title: "AoPS Wiki Archive",
-    icon: TerminalIcon,
-    color: "from-orange-400 to-pink-600",
-    desc: "A centralized repository of official statements and solutions for AMC, AIME, and USAMO. The ultimate quick-reference tool for historical contest data.",
-    url: "https://artofproblemsolving.com/wiki/index.php/Main_Page"
   },
   {
     title: "Study Groups",
     icon: UserGroupIcon, // Swapped to UserGroup for better context
     color: "from-green-400 to-cyan-500",
-    desc: "A custom-built learning management system designed specifically for math clubs, classes, and competitive teams to track progress together.",
-    url: "/groups"
-  },
-  {
-    title: "Mock Contests",
-    icon: ClockIcon, // Changed to Clock to represent "Timed"
-    color: "from-purple-500 to-indigo-500",
-    desc: "Build endurance with timed sets modeled exactly after the AMC, AIME, and USAMO environments. Perfect for overcoming competition-day nerves.",
-    url: "/groups"
-  },
-  {
-    title: "Proofwriting Clinics",
-    icon: ChartBarIcon,
-    color: "from-cyan-400 to-sky-500",
-    desc: "Intensive short-form workshops that emphasize mathematical rigor, logical structure, and stylistic clarity in high-level proof writing.",
+    desc: "A custom-built learning management system designed specifically for math clubs, classes, and competitive teams to track progress together. (Coming Soon!)",
     url: "/groups"
   },
   {
     title: "Mentorship",
     icon: CogIcon,
     color: "from-yellow-400 to-orange-500",
-    desc: "Get paired with experienced mentors for direct feedback on your solutions, personalized study plans, and guidance through the contest circuit.",
+    desc: "Get paired with experienced mentors for direct feedback on your solutions, personalized study plans, and guidance through the contest circuit. (Coming Soon!)",
     url: "/groups"
   }
 ];
