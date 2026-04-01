@@ -9,7 +9,7 @@
       "difficulty": "Medium",
       "isStarred": false,
       "tags": ["Statistics", "Mean", "Median"],
-      "statement": "What is the sum of all real numbers $x$ for which the median of the numbers $4, 6, 8, 17,$ and $x$ is equal to the mean of those five numbers?",
+      "statement": "What is the sum of all real numbers $x$ for which the median of the numbers $4,6,8,17,$ and $x$ is equal to the mean of those five numbers?",
       "solutionMetadata": {
         "kind": "none"
       }   
@@ -22,7 +22,7 @@
       "difficulty": "Easy",
       "isStarred": false,
       "tags": ["Number Theory", "Primes"],
-      "statement": "The six-digit number $\\underline{2}\\,\\underline{0}\\,\\underline{2}\\,\\underline{1}\\,\\underline{0}\\,\\underline{A}$ is prime for only one digit $A$. What is $A$?",
+      "statement": "The quiz scores of a class with $k > 12$ students have a mean of $8$. The mean of a collection of $12$ of these quiz scores is $14$. What is the mean of the remaining quiz scores in terms of $k$?",
       "solutionMetadata": {
         "kind": "none"
       } 
