@@ -25,6 +25,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Algebra Basics',
+      description: 'Linear equations, factoring patterns, and core manipulation skills.',
       items: [
         'algebra-basics',
         'exponent-rules',
@@ -38,6 +39,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Algebra Tools',
+      description: "Vieta's formulas and polynomial root transformations.",
       items: [
         'vieta-formulas',
         'polynomial-manipulations',
@@ -45,6 +47,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Averages and Sequences',
+      description: 'Means, arithmetic and geometric sequences, and telescoping sums.',
       items: [
         'mean-median-mode-harmonic',
         'arithmetic-sequences',
@@ -54,10 +57,12 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Intro Inequalities',
+      description: 'AM-GM, Cauchy-Schwarz, and foundational bounding techniques.',
       items: ['amgm-inequality', 'cauchy-schwarz', "inequalities-foundations"],
     },
     {
       name: 'Counting Fundamentals',
+      description: 'Permutations, combinations, inclusion-exclusion, and pigeonhole.',
       items: [
         'counting-fundamentals',
         'pascals-triangle-binomial-theorem',
@@ -68,7 +73,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Geometry Basics',
-
+      description: 'Triangles, similarity, circles, and core area formulas.',
       items: [
         'geometry-basics',
         'triangle-angle-sum',
@@ -89,50 +94,58 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Coordinate Geometry Basics',
+      description: 'Distance, midpoint, slope, and line equations.',
       items: ['coordinate-geometry-basics', 'line-equations'],
     },
     {
       name: 'Word Problems',
+      description: 'Translating stories into equations using rates, mixtures, and ratios.',
       items: ['word-problems'],
     },
     {
       name: 'Intro to Probability',
+      description: 'Sample spaces, complements, conditional probability, and expected value.',
       items: ['intro-probability'],
     },
   ],
   intermediate: [
     {
       name: 'Advanced Algebra',
+      description: 'Quadratics, systems, and polynomial identities for AMC 10/12.',
       items: ['advanced-algebra',
         'higher-power-factorizations',
         'sophie-germain-identity',
         'newton-sums',
         'symmetric-polynomials',
         'symmetric-identity',
-        'vieta-root-jumping',
         'sum-formulas-powers',
       ],
     },
     {
       name: 'Functional Equations',
+      description: 'Standard substitutions and symmetry-based approaches.',
       items: [
         'functional-equations',
       ],
     },
     {
       name: 'Counting & Casework',
+      description: 'Multi-step counting with careful case analysis.',
       items: ['advanced-counting'],
     },
     {
       name: 'Probability',
+      description: 'Conditional probability, geometric probability, and expected value.',
       items: ['probability-intermediate'],
     },
     {
       name: 'Number Theory',
+      description: 'Modular arithmetic, CRT, and divisibility techniques.',
       items: ['modular-arithmetic', 'number-theory-intermediate', 'chinese-remainder-theorem'],
     },
     {
       name: 'Euclidean Geometry',
+      description: 'Circle theorems, power of a point, and cyclic quadrilaterals.',
       items: [
         'euclidean-geometry',
         'power-of-a-point',
@@ -144,18 +157,22 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Coordinate Geometry',
+      description: 'Analytic methods, Shoelace formula, and coordinate-based proofs.',
       items: ['coordinate-geometry', 'shoelace-formula'],
     },
     {
       name: 'Inequalities',
+      description: 'Algebraic and geometric inequality techniques for AMC/AIME.',
       items: ['inequalities'],
     },
     {
       name: 'Sequences & Series',
+      description: 'Convergence, recursive formulas, and summation methods.',
       items: ['sequences-series'],
     },
     {
       name: 'Trigonometry',
+      description: 'Unit circle, identities, and trig equations for contest math.',
       items: [
         'trig-unit-circle',
         'trig-identities',
@@ -169,6 +186,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Complex Numbers',
+      description: 'Complex arithmetic, polar form, roots of unity, and geometry.',
       items: [
         'complex-basics',
         'complex-algebra',
@@ -183,28 +201,34 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Geometry Extensions',
+      description: 'Regular polygons and three-dimensional geometry.',
       items: ['regular-polygons', 'three-d-geometry'],
     },
   ],
   advanced: [
     {
       name: 'Strong Number Theory',
+      description: 'Lifting the exponent, orders, and deeper divisibility arguments.',
       items: ['number-theory-advanced'],
     },
     {
       name: 'Advanced Counting',
+      description: 'Generating functions, bijections, and harder combinatorial arguments.',
       items: ['counting-advanced'],
     },
     {
       name: 'Polynomials & Roots',
+      description: 'Root bounding, irreducibility, and polynomial manipulation.',
       items: ['polynomials-roots'],
     },
     {
       name: 'Complex Numbers',
+      description: 'Advanced complex number techniques for AIME geometry and algebra.',
       items: ['complex-numbers'],
     },
     {
       name: 'Advanced Geometry',
+      description: 'Projective methods, inversions, homothety, and spiral similarity.',
       items: [
         'geometry-advanced',
         'sphere-geometry',
@@ -214,48 +238,59 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Trig in Contests',
+      description: 'Contest-specific trig tricks and identities.',
       items: ['trig-contests'],
     },
     {
       name: 'Inequalities (AIME)',
+      description: 'Schur, SOS, and multi-variable inequality techniques.',
       items: ['inequalities-advanced'],
     },
     {
       name: 'Generating Functions',
+      description: 'Using formal power series to solve counting problems.',
       items: ['generating-functions'],
     },
     {
       name: 'Functional Equations (AIME)',
+      description: 'Harder functional equations requiring injectivity and Cauchy-type analysis.',
       items: ['functional-equations-advanced'],
     },
   ],
   usamo: [
     {
       name: 'Proof Writing',
+      description: 'Structuring clear, rigorous proofs for olympiad submissions.',
       items: ['proof-writing-basics'],
     },
     {
       name: 'Induction & Extremal',
+      description: 'Strong induction, well-ordering, and extremal principle arguments.',
       items: ['induction-extremal'],
     },
     {
       name: 'Graph Theory Intro',
+      description: 'Graphs, trees, coloring, and combinatorial structure.',
       items: ['graph-theory-intro'],
     },
     {
       name: 'Advanced Inequalities',
+      description: 'Olympiad-level bounding with Schur, Muirhead, and mixing variables.',
       items: ['inequalities-olympiad'],
     },
     {
       name: 'Olympiad Number Theory',
-      items: ['olympiad-number-theory'],
+      description: 'Vieta jumping, infinite descent, and olympiad divisibility.',
+      items: ['olympiad-number-theory', 'vieta-root-jumping'],
     },
     {
       name: 'Olympiad Geometry',
+      description: 'Synthetic and projective techniques for proof-based geometry.',
       items: ['olympiad-geometry'],
     },
     {
       name: 'Strategy & Writeups',
+      description: 'Time management, problem selection, and solution presentation.',
       items: ['strategy-writeup'],
     },
   ],

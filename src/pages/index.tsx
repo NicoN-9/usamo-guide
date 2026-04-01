@@ -10,6 +10,7 @@ import { Feature } from '../components/Index/Feature';
 import { ProblemsetsFeature } from '../components/Index/features/ProblemsetsFeature';
 import { ProgressTrackingFeature } from '../components/Index/features/ProgressTrackingFeature';
 import { ResourcesFeature } from '../components/Index/features/ResourcesFeature';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import ActiveCardsHome from '../components/activeCardsHome';
 import TrustedBy from '../components/Index/TrustedBy';
 import Layout from '../components/layout';
@@ -35,6 +36,33 @@ const usamoTitleClasses =
   'text-center font-extrabold tracking-tight text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl bg-clip-text text-transparent bg-linear-to-b from-gray-900 to-gray-600 dark:from-white dark:to-red-200';
 const linkTextStyles =
   'text-orange-600 dark:text-orange-300 transition hover:text-orange-800 dark:hover:text-orange-100';
+
+function RevealSection({
+  children,
+  className = '',
+  delay = 0,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+}) {
+  const { ref, isVisible } = useScrollReveal<HTMLDivElement>(0.1);
+  return (
+    <div
+      ref={ref}
+      className={classNames(
+        'transition-all duration-700 ease-out',
+        isVisible
+          ? 'translate-y-0 opacity-100'
+          : 'translate-y-10 opacity-0',
+        className
+      )}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function IndexPage({ path }): JSX.Element {
   const currentUser = useCurrentUser();
@@ -175,6 +203,7 @@ export default function IndexPage({ path }): JSX.Element {
 
             <div className="h-10 sm:h-14"></div>
 
+            <RevealSection>
             <div className="flex flex-col items-center gap-4 text-center text-gray-600 md:justify-center md:text-sm dark:text-gray-400">
               <span className="block font-semibold text-center">Built by the USAMO Guide community</span>
               <div className="flex w-full flex-wrap justify-center gap-4 sm:gap-6">
@@ -204,6 +233,7 @@ export default function IndexPage({ path }): JSX.Element {
                 </a>
               </div>
             </div>
+            </RevealSection>
           </div>
 
           <div className="h-16 sm:h-24"></div>
@@ -266,15 +296,18 @@ export default function IndexPage({ path }): JSX.Element {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-orange-900/20 blur-[150px] rounded-full pointer-events-none" />
 
         <div className={containerClasses}>
-          <h2 className="justify-center items-center mx-auto flex flex-col text-6xl font-bold pb-3 dark:text-orange-50/90">
-            Learn Contest Math
-          </h2>
-          <p className={classNames(subtextClasses, 'text-center mx-auto !w-2/4')}>
-            Carefully designed for math contest students - available to everyone,
-            for free.
-          </p>
+          <RevealSection>
+            <h2 className="justify-center items-center mx-auto flex flex-col text-6xl font-bold pb-3 dark:text-orange-50/90">
+              Learn Contest Math
+            </h2>
+            <p className={classNames(subtextClasses, 'text-center mx-auto !w-2/4')}>
+              Carefully designed for math contest students - available to everyone,
+              for free.
+            </p>
+          </RevealSection>
 
           <div className="h-12 md:h-20 2xl:h-36"></div>
+          <RevealSection delay={100}>
           <div className="grid gap-6 lg:grid-cols-2">
             <Feature
               iconSrc="/images/feature-resources.png"
@@ -314,8 +347,10 @@ export default function IndexPage({ path }): JSX.Element {
               </span>
             </Feature>
           </div>
+          </RevealSection>
 
           <div className="h-6 md:h-10 2xl:h-24"></div>
+          <RevealSection delay={150}>
           <div className="grid gap-6 lg:grid-cols-2">
             <Feature
               iconSrc="/images/feature-progress.png"
@@ -371,6 +406,7 @@ export default function IndexPage({ path }): JSX.Element {
               </a>
             </Feature>
           </div>
+          </RevealSection>
 
           <div className="h-16 md:h-20 2xl:h-36"></div>
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-linear-to-b from-transparent to-[#2d170c] opacity-90 blur-2xl dark:block" />
@@ -385,6 +421,7 @@ export default function IndexPage({ path }): JSX.Element {
         <div className="relative z-10">
           <div className="h-15 md:h-20"></div>
           <div className={containerClasses}>
+            <RevealSection>
             <div className="grid items-center gap-10 lg:grid-cols-12">
               <div className="lg:col-span-7">
                 <h2
@@ -422,6 +459,7 @@ export default function IndexPage({ path }): JSX.Element {
                 </div>
               </div>
             </div>
+            </RevealSection>
           </div>
           <div className="h-15 md:h-20"></div>
         </div>
@@ -431,10 +469,13 @@ export default function IndexPage({ path }): JSX.Element {
       <div className="relative bg-white dark:[background:linear-gradient(to_bottom,rgba(15,10,5,1)_0%,rgba(18,12,7,1)_100%)]">
 
         <div className="relative z-10 mx-auto max-w-(--breakpoint-xl) px-4 pt-12 pb-16 sm:px-6 sm:pt-16 sm:pb-20 lg:px-8 lg:pt-20 lg:pb-28">
+          <RevealSection>
           <h2 className={classNames(headerClasses, 'dark:text-gray-100 text-center')}>
             Frequently asked questions
           </h2>
+          </RevealSection>
           <div className="pt-10 md:pt-16">
+            <RevealSection delay={100}>
             <dl className="mx-auto grid max-w-6xl gap-8 text-center md:grid-cols-2 md:gap-8">
               <div>
                 <div className="rounded-xl border border-gray-200 bg-white p-6 text-left shadow-sm dark:border-orange-500/20 dark:bg-[#1a130d]/75">
@@ -572,6 +613,7 @@ export default function IndexPage({ path }): JSX.Element {
                 </div>
               </div>
             </dl>
+            </RevealSection>
           </div>
         </div>
       </div>
