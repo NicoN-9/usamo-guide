@@ -1,0 +1,85 @@
+{
+    "MODULE_ID": "inequalities-foundations",
+    "practice": [
+      {
+        "uniqueId": "amc8-2018-16",
+        "name": "Problem 16 (2018 AMC 8)",
+        "url": "https://artofproblemsolving.com/wiki/index.php/2018_AMC_8_Problems/Problem_16",
+        "source": "AMC 8",
+        "difficulty": "Normal",
+        "isStarred": false,
+        "tags": ["Algebra", "Inequalities", "Intervals"],
+        "solutionMetadata": { "kind": "none" }
+      },
+      {
+        "uniqueId": "amc10-2019a-14",
+        "name": "Problem 14 (2019 AMC 10A)",
+        "url": "https://artofproblemsolving.com/wiki/index.php/2019_AMC_10A_Problems/Problem_14",
+        "source": "AMC 10",
+        "difficulty": "Normal",
+        "isStarred": true,
+        "tags": ["Algebra", "Absolute Value", "Distance"],
+        "solutionMetadata": { "kind": "none" }
+      },
+      {
+        "uniqueId": "amc10-2017a-8",
+        "name": "Problem 8 (2017 AMC 10A)",
+        "url": "https://artofproblemsolving.com/wiki/index.php/2017_AMC_10A_Problems/Problem_8",
+        "source": "AMC 10",
+        "difficulty": "Normal",
+        "isStarred": false,
+        "tags": ["Algebra", "Bounding", "Inequalities"],
+        "solutionMetadata": { "kind": "none" }
+      },
+      {
+        "uniqueId": "amc12-2002b-8",
+        "name": "Problem 8 (2002 AMC 12B)",
+        "url": "https://artofproblemsolving.com/wiki/index.php/2002_AMC_12B_Problems/Problem_8",
+        "source": "AMC 12",
+        "difficulty": "Normal",
+        "isStarred": false,
+        "tags": ["Algebra", "Optimization", "Trivial Inequality"],
+        "solutionMetadata": { "kind": "none" }
+      },
+      {
+        "uniqueId": "amc10-2020a-9",
+        "name": "Problem 9 (2020 AMC 10A)",
+        "url": "https://artofproblemsolving.com/wiki/index.php/2020_AMC_10A_Problems/Problem_9",
+        "source": "AMC 10",
+        "difficulty": "Normal",
+        "isStarred": true,
+        "tags": ["Algebra", "Systems of Inequalities", "Absolute Value"],
+        "solutionMetadata": { "kind": "none" }
+      },
+      {
+        "uniqueId": "amc10-2021fall-16",
+        "name": "Problem 16 (2021 Fall AMC 10A)",
+        "url": "https://artofproblemsolving.com/wiki/index.php/2021_Fall_AMC_10A_Problems/Problem_16",
+        "source": "AMC 10",
+        "difficulty": "Hard",
+        "isStarred": false,
+        "tags": ["Algebra", "Quadratics", "Vertex Formulation"],
+        "solutionMetadata": { "kind": "none" }
+      },
+      {
+        "uniqueId": "amc10-2015a-15",
+        "name": "Problem 15 (2015 AMC 10A)",
+        "url": "https://artofproblemsolving.com/wiki/index.php/2015_AMC_10A_Problems/Problem_15",
+        "source": "AMC 10",
+        "difficulty": "Hard",
+        "isStarred": true,
+        "tags": ["Algebra", "Symmetry", "Equalization"],
+        "solutionMetadata": { "kind": "none" }
+      },
+      {
+        "uniqueId": "amc12-2019a-18",
+        "name": "Problem 18 (2019 AMC 12A)",
+        "url": "https://artofproblemsolving.com/wiki/index.php/2019_AMC_12A_Problems/Problem_18",
+        "source": "AMC 12",
+        "difficulty": "Hard",
+        "isStarred": false,
+        "tags": ["Algebra", "AM-GM", "Optimization"],
+        "solutionMetadata": { "kind": "none" }
+      }
+    ]
+  }

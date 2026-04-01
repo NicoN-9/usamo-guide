@@ -54,7 +54,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
     },
     {
       name: 'Intro Inequalities',
-      items: ['amgm-inequality', 'cauchy-schwarz'],
+      items: ['amgm-inequality', 'cauchy-schwarz', "inequalities-foundations"],
     },
     {
       name: 'Counting Fundamentals',
