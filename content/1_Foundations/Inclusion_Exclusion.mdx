@@ -51,7 +51,9 @@ Tip: Choose whichever side has simpler intersections, as it is useful for calcul
  
 To count integers in $[1, n]$ divisible by $a$ or $b$, we utilize the same formula but within "divisibility" ideas. 
 
-$$\left\lfloor \frac{n}{a} \right\rfloor + \left\lfloor \frac{n}{b} \right\rfloor - \left\lfloor \frac{n}{\text{lcm}(a,b)} \right\rfloor.$$
+$$
+\left\lfloor \frac{n}{a} \right\rfloor + \left\lfloor \frac{n}{b} \right\rfloor - \left\lfloor \frac{n}{lcm(a,b)} \right\rfloor
+$$
  
 An integer is divisible by both $a$ and $b$ if and only if it is divisible by
 $\text{lcm}(a, b)$ — not $ab$ (those differ when $\gcd(a,b) > 1$). 
@@ -87,7 +89,10 @@ What is the probability that when rolling two fair dice, at least one shows a nu
  
 Taking the complement, which is both dice showing $\leq 4$:
  
-$$P(\text{both} \leq 4) = \left(\tfrac{4}{6}\right)^2 = \tfrac{4}{9}, \qquad P(\text{at least one} > 4) = 1 - \tfrac{4}{9} = \tfrac{5}{9}.$$
+$$
+P(\le 4 \text{on both dice}) = \left(\frac{4}{6}\right)^2 = \frac{4}{9}, \qquad
+P(\text{at least one} > 4) = 1 - \frac{4}{9} = \frac{5}{9}.
+$$
  
 Hence we see that the complement is almost always faster than applying PIE directly.
 
