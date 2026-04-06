@@ -1,21 +1,72 @@
 ---
 id: proof-writing-basics
 title: Proof Writing Basics
-author: USAMO Guide Team
+author: USAMO Guide Team, Nico Young
 description: Structure, clarity, and rigor for olympiad proofs.
 prerequisites: []
 ---
 
 ## Overview
+In this page we introduce how to write proofs clearly. 
 
-USAMO solutions are written proofs. This module focuses on clarity, structure,
-and logically complete arguments.
+### Why learn writings?
+The common question that is asked frequently is 
+*``Why do we care so much about proof-writing? 
+isn't it okay as long as I can get a 7?''*
 
-## Key Ideas
+Evan Chen has a nice answer to this question: 
+see https://web.evanchen.cc/faq-contest.html#C-24
 
-- State what you are proving and define all variables.
-- Use complete sentences and justify each step.
-- Highlight the key invariant or construction early.
+## mathematical argument 
+In this section we talk about mathematical proofs; 
+you can't get a $7$ if you're mathematically wrong. 
+
+### ``Find all'' type problem is always two-part problem
+
+Some olympiad problems looks like this: 
+``Find all $n$ such that the condition holds.''
+If you think the answer set is $S$, then 
+we need to prove the following: 
+- For $n\in S$ prove that the condition holds. 
+- For $n\notin S$, prove that $n$ doesn't satisfy the condition. 
+
+Notice that we have to prove **both** of two statements; 
+we need to write it even if it's trivial! 
+It is a common mistake to forget writing ``this clearly works'' 
+and losing $1$ point in a contest. 
+Thus, we recommend to write solution in the following form: 
+1. Start by describing all the solutions you found, which looks like 
+	``The answer is $n\in \{1, 2, 4, 12\}$''. 
+2. Show that these solutions you stated works. You **must** write this 
+	even if it's trivial, because it's the part of a problem. 
+3. Prove that those are the only ones that satisfy the condition. 
+	Again, you must write this part even if it's trivial, 
+	since it's a part of a problem. 
+
+Note that sometimes part 2 and 3 can be swapped, though **you must write both**. 
+By skipping the trivial part grader can't know that 
+you know the part is trivial or you don't know the proof so you didn't write it. 
+
+### optimization problem is always two-part problem
+
+Optimization problem works similarly as above; 
+suppose a problem with :``find the minimum/maximum of $m$'' 
+and you've got the answer $M$, then we need to prove that: 
+- There **exists** a situation where $m=M$. 
+- For **all** possible configurations we must have that 
+	$M$ is the minimum/maximum of $m$. 
+
+Thus, we recommend writing proofs as follows: 
+1. Describe your answer by writing ``The answer is $m=\text{(something)}$
+2. Show that the bound is achieved: ``which is achieved when blah blah''. 
+3. Show that we always have $m\le M$ (or $m\ge M$).
+
+### How much do I need to write? 
+
+Commonly asked question is: 
+``How much details do I need to put in my solution?'' . 
+
+
 
 ## Worked Example
 
