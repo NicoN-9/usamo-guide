@@ -96,7 +96,7 @@ const RESOURCES: TopicResources[] = [
       },
       {
         name: 'IMOmath - Functional Equations',
-        href: 'https://imomath.com/index.cgi?page=problemsFunctionalEquations',
+        href: 'https://www.imomath.com/index.cgi?page=functionalEquations',
         description:
           'Olympiad-style functional equation problems sorted for focused practice.',
         imageSrc:
