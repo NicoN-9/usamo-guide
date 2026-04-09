@@ -86,7 +86,7 @@ export default function Template(props): JSX.Element {
         `}</script>
       </Helmet>
 
-      <div className="relative overflow-hidden bg-gradient-to-b from-orange-50/70 via-amber-50/55 to-white dark:from-[#12100d] dark:via-[#131720] dark:to-[#0f172a]">
+      <div className="relative overflow-hidden bg-gradient-to-b from-[#171228] via-[#221737] to-[#73576A]">
 
         <div className="pointer-events-none absolute inset-0">
           <svg className="h-full w-full opacity-[0.08] dark:opacity-[0.1]" xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +97,7 @@ export default function Template(props): JSX.Element {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1"
-                  className="text-orange-300/35 dark:text-orange-400/28"
+                  className="text-[#F0C2FF]/28"
                 />
               </pattern>
             </defs>

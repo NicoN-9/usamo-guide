@@ -59,19 +59,25 @@ function ProblemHit({ hit }: ProblemHitProps) {
           openProblemInNewTab();
         }
       }}
-      className="problem-card relative rounded-xl border border-white/20 bg-white/40 p-4 ring-1 ring-white/30 backdrop-blur-sm transition hover:-translate-y-0.5 hover:shadow-2xl hover:bg-white/50 dark:border-slate-700/80 dark:bg-slate-900/40 dark:ring-white/10 dark:hover:bg-slate-900/60"
+      className="problem-card relative rounded-xl border p-4 ring-1 backdrop-blur-sm transition hover:-translate-y-0.5 hover:shadow-2xl"
+      style={{
+        borderColor: 'rgba(240, 194, 255, 0.26)',
+        background:
+          'linear-gradient(145deg, rgba(36, 26, 49, 0.88), rgba(30, 22, 44, 0.86))',
+        boxShadow: '0 10px 24px rgba(13, 13, 13, 0.22)',
+      }}
     >
       <div className="flex w-full flex-row justify-between">
         <span>
-          <span className="text-sm font-medium text-blue-700 dark:text-blue-400">
+          <span className="text-sm font-medium text-[#B88BD0]">
             {hit.source}
           </span>
-          <p className="mt-1 mb-2 text-xl leading-6 font-semibold text-slate-900 dark:text-white">
+          <p className="mt-1 mb-2 text-xl leading-6 font-semibold text-[#F4EDEA]">
             <Highlight hit={hit} attribute="name" />
           </p>
           {hit.isStarred && (
             <svg
-              className="ml-2 inline-block h-6 w-4 pb-1 text-blue-400"
+              className="ml-2 inline-block h-6 w-4 pb-1 text-[#F0C2FF]"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -110,7 +116,7 @@ function ProblemHit({ hit }: ProblemHitProps) {
           href={solutionLink.url}
           target="_blank"
           rel="noreferrer"
-          className="dark:text-dark-med-emphasis text-sm text-gray-500"
+          className="text-sm text-[#D2D4C8] hover:text-[#F0C2FF]"
         >
           View Solution
             <svg
@@ -125,7 +131,7 @@ function ProblemHit({ hit }: ProblemHitProps) {
         )}
       {!hideModules && !isBlindMode && (
         <>
-          <p className="dark:text-dark-med-emphasis mt-2 text-sm text-gray-500">
+          <p className="mt-2 text-sm text-[#D2D4C8]">
             Appears In:
           </p>
           <ul className="ml-6 list-disc">
@@ -135,12 +141,12 @@ function ProblemHit({ hit }: ProblemHitProps) {
                   <Link
                     onClick={e => e.stopPropagation()}
                     to={`/${section}/${moduleID}/#problem-${hit.objectID}`}
-                    className="text-sm text-blue-600 dark:text-blue-400"
+                    className="text-sm text-[#8BC2FF] hover:text-[#B8DCFF]"
                   >
                     {moduleLabel}
                   </Link>
                 ) : (
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                  <span className="text-sm text-[#D2D4C8]">
                     {moduleLabel}
                   </span>
                 )}
