@@ -345,8 +345,10 @@ export default function DashboardPage(props: PageProps) {
                   style={{
                     border: '1px solid rgba(112, 66, 138, 0.55)',
                     backgroundColor: '#70428A',
-                    color: VANILLA,
-                  }}
+                    '--pme-color': VANILLA,
+                    '--pme-hover-color': '#201C36',
+                    '--pme-wipe-bg': '#F7DEFF',
+                  } as React.CSSProperties}
                   to={
                     lastViewedModuleURL ||
                     '/foundations/arithmetic-nt-basics'

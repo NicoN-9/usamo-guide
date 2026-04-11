@@ -238,9 +238,11 @@ export default function AetherFlowHero(): JSX.Element {
               border: '1px solid rgba(112, 66, 138, 0.55)',
               background:
                 'linear-gradient(135deg, #F7DEFF 0%, #70428A 55%, #F0C2FF 100%)',
-              color: '#201C36',
               boxShadow: 'none',
-            }}
+              '--pme-color': '#201C36',
+              '--pme-hover-color': '#F4EDEA',
+              '--pme-wipe-bg': '#70428A',
+            } as React.CSSProperties}
           >
             Start Learning {'>'}
           </Link>
@@ -250,9 +252,11 @@ export default function AetherFlowHero(): JSX.Element {
             style={{
               border: '1px solid rgba(112, 66, 138, 0.55)',
               backgroundColor: '#70428A',
-              color: '#F4EDEA',
               boxShadow: 'none',
-            }}
+              '--pme-color': '#F4EDEA',
+              '--pme-hover-color': '#201C36',
+              '--pme-wipe-bg': '#F7DEFF',
+            } as React.CSSProperties}
           >
             Browse Topics
           </Link>

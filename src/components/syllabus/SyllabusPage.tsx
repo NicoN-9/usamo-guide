@@ -182,11 +182,14 @@ export default function SyllabusPage({
               <div className="mb-8 flex flex-wrap items-center justify-center gap-4">
                 <Link
                   to="/dashboard"
-                  className="purple-motion-effect inline-block rounded-full px-7 py-3 text-sm font-bold text-[#F4EDEA] transition-all duration-300"
+                  className="purple-motion-effect inline-block rounded-full px-7 py-3 text-sm font-bold transition-all duration-300"
                   style={{
                     border: '1px solid rgba(112, 66, 138, 0.55)',
                     backgroundColor: '#70428A',
-                  }}
+                    '--pme-color': '#F4EDEA',
+                    '--pme-hover-color': '#201C36',
+                    '--pme-wipe-bg': '#F7DEFF',
+                  } as React.CSSProperties}
                 >
                   Continue Learning {'>'}
                 </Link>

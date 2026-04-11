@@ -350,9 +350,11 @@ export default function IndexPage({ path }): JSX.Element {
                         style={{
                           border: `1px solid rgba(112, 66, 138, 0.55)`,
                           backgroundColor: PURPLE_FROM_IMAGE2,
-                          color: VANILLA,
                           boxShadow: 'none',
-                        }}
+                          '--pme-color': VANILLA,
+                          '--pme-hover-color': '#201C36',
+                          '--pme-wipe-bg': '#F7DEFF',
+                        } as React.CSSProperties}
                 >
                   Apply Now
                 </a>

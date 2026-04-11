@@ -178,8 +178,10 @@ export default function ProblemsPage(props: PageProps<DataProps>) {
                       style={{
                         border: '1px solid rgba(112, 66, 138, 0.55)',
                         backgroundColor: '#3F2D51',
-                        color: VANILLA,
-                      }}
+                        '--pme-color': VANILLA,
+                        '--pme-hover-color': '#201C36',
+                        '--pme-wipe-bg': '#F0C2FF',
+                      } as React.CSSProperties}
                       title={'Shuffle problems'}
                     >
                     <svg
@@ -204,8 +206,10 @@ export default function ProblemsPage(props: PageProps<DataProps>) {
                     style={{
                       border: '1px solid rgba(240, 194, 255, 0.34)',
                       background: 'rgba(36, 26, 49, 0.84)',
-                      color: '#F0C2FF',
-                    }}
+                      '--pme-color': '#F0C2FF',
+                      '--pme-hover-color': '#241A31',
+                      '--pme-wipe-bg': '#F0C2FF',
+                    } as React.CSSProperties}
                     title={'Go to a random unsolved problem'}
                   >
                     <svg
