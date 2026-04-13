@@ -1,0 +1,52 @@
+---
+id: complementary-counting
+title: Complementary Counting
+author: USAMO Guide Team
+description: Utilizing the Total−None shortcut for "at least one" constraint problems.
+prerequisites: [counting-fundamentals]
+---
+
+<IncompleteSection />
+
+## Overview
+
+Complementary counting flips the problem: instead of counting what you want,
+count what you *don't* want and subtract from the total. This is especially
+powerful for "at least one" constraints, where direct counting is messy but
+counting zero occurrences is clean.
+
+## Key Ideas
+
+- **Complementary counting**: desired count = total − undesired count.
+- Use it when the phrase "at least one" appears, or when the complement is
+  simpler to count.
+- Always verify: total − complement = direct count.
+- Works well with probability too: $P(\text{at least one}) = 1 - P(\text{none})$.
+
+## Core Skills
+
+### Identifying When to Use It
+
+If direct counting requires many cases but the complement is one simple
+calculation, switch to complementary counting.
+
+### "At Least One" Pattern
+
+"How many 3-digit numbers have at least one 5?" Total 3-digit numbers = 900.
+Numbers with no 5: $8 \times 9 \times 9 = 648$. Answer: $900 - 648 = 252$.
+
+### Combining with Other Techniques
+
+Complementary counting can be combined with casework: count the complement, then
+subtract.
+
+## Worked Example
+
+How many subsets of $\{1, 2, 3, 4, 5\}$ contain at least one even number?
+
+Total subsets = $2^5 = 32$. Subsets with no even numbers (only from
+$\{1, 3, 5\}$) = $2^3 = 8$. Answer: $32 - 8 = 24$.
+
+## Practice Problems
+
+<Problems problems="practice" />

@@ -1,0 +1,52 @@
+---
+id: permutations-combinations
+title: Permutations and Combinations
+author: USAMO Guide Team
+description: Differentiating between ordered arrangements and unordered group selections.
+prerequisites: [counting-fundamentals]
+---
+
+<IncompleteSection />
+
+## Overview
+
+Does order matter? That single question determines whether you use a permutation
+or a combination. Permutations count arrangements where the sequence matters
+(president, VP, treasurer). Combinations count selections where it does not
+(choose a committee of 3). Mastering this distinction is critical for AMC 8
+combinatorics.
+
+## Key Ideas
+
+- **Permutation**: an ordered arrangement. $P(n, r) = \frac{n!}{(n-r)!}$.
+- **Combination**: an unordered selection. $\binom{n}{r} = \frac{n!}{r!(n-r)!}$.
+- If rearranging the chosen items creates a "different" outcome, use
+  permutations. If not, use combinations.
+- $\binom{n}{r} = \binom{n}{n-r}$ (choosing what to include = choosing what to
+  exclude).
+
+## Core Skills
+
+### Identifying Order
+
+"How many 3-letter codes?" → order matters → permutation.
+"How many 3-person committees?" → order doesn't matter → combination.
+
+### Computing Small Binomial Coefficients
+
+$\binom{5}{2} = \frac{5 \times 4}{2 \times 1} = 10$. Cancel before multiplying.
+
+### Permutations with Repetition
+
+If some items are identical, divide by the factorial of each group of repeats:
+arrangements of MISSISSIPPI = $\frac{11!}{4! \cdot 4! \cdot 2!}$.
+
+## Worked Example
+
+How many ways can you choose 3 books from a shelf of 7?
+
+$\binom{7}{3} = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35$.
+
+## Practice Problems
+
+<Problems problems="practice" />

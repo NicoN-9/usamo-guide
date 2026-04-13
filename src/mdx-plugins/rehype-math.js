@@ -1,5 +1,5 @@
 /*eslint-disable */
-const visit = require('unist-util-visit');
+const visit = require('unist-util-visit').visit || require('unist-util-visit');
 const katex = require('katex').renderToString;
 const unified = require('unified');
 const parse = require('rehype-parse');

@@ -9,6 +9,12 @@ export const typeDefs = `
       pyOc: Int
       toc: TableOfContents
       mdast: String
+      fields: XdmFields
+    }
+
+    type XdmFields {
+      division: String
+      gitAuthorTime: String
     }
 
     type XdmFrontmatter implements Node {

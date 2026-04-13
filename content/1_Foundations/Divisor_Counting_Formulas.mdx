@@ -1,0 +1,53 @@
+---
+id: divisor-counting-formulas
+title: Divisor Counting Formulas
+author: USAMO Guide Team
+description: Using prime factorization to calculate the total number of positive integer factors.
+prerequisites: [prime-factorization]
+---
+
+<IncompleteSection />
+
+## Overview
+
+Given the prime factorization of a number, you can instantly count its total
+number of divisors, sum them, and even list them systematically. The divisor
+counting formula is one of the most elegant results in elementary number theory
+and a frequent AMC 8 topic.
+
+## Key Ideas
+
+- If $n = p_1^{a_1} p_2^{a_2} \cdots p_k^{a_k}$, then the number of positive
+  divisors is $(a_1+1)(a_2+1)\cdots(a_k+1)$.
+- The sum of divisors formula:
+  $\sigma(n) = \frac{p_1^{a_1+1}-1}{p_1-1} \cdot \frac{p_2^{a_2+1}-1}{p_2-1} \cdots$.
+- Perfect squares have an odd number of divisors.
+- To find which number below 100 has the most divisors, check numbers with many
+  small prime factors like $2^a \cdot 3^b \cdot 5^c$.
+
+## Core Skills
+
+### Counting Divisors
+
+$72 = 2^3 \cdot 3^2$ has $(3+1)(2+1) = 12$ divisors.
+
+### Finding a Number with a Given Divisor Count
+
+"Find the smallest positive integer with exactly 6 divisors." Try
+$2^5 = 32$ (exponent pattern $5+1=6$) or $2^2 \cdot 3 = 12$ (pattern
+$(2+1)(1+1)=6$). The smallest is 12.
+
+### Perfect Square Detection
+
+A number is a perfect square if and only if every exponent in its prime
+factorization is even.
+
+## Worked Example
+
+How many positive divisors does 360 have?
+
+$360 = 2^3 \cdot 3^2 \cdot 5$. Divisor count = $(3+1)(2+1)(1+1) = 24$.
+
+## Practice Problems
+
+<Problems problems="practice" />

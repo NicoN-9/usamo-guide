@@ -1,0 +1,52 @@
+---
+id: primes-and-composites
+title: Primes and Composites
+author: USAMO Guide Team
+description: Sieve of Eratosthenes and identifying prime characteristics.
+prerequisites: []
+---
+
+<IncompleteSection />
+
+## Overview
+
+A prime number has exactly two positive divisors: 1 and itself. Every integer
+greater than 1 is either prime or composite (a product of smaller primes).
+Recognizing primes quickly and understanding the Sieve of Eratosthenes are
+essential AMC 8 skills.
+
+## Key Ideas
+
+- 1 is neither prime nor composite. 2 is the only even prime.
+- To test whether $n$ is prime, check divisibility by all primes up to
+  $\sqrt{n}$.
+- The Sieve of Eratosthenes efficiently lists all primes up to a given bound by
+  crossing out multiples.
+- There are 25 primes below 100. Knowing them by heart is a contest advantage.
+
+## Core Skills
+
+### Primality Testing
+
+To check if 97 is prime: $\sqrt{97} < 10$, so test 2, 3, 5, 7. None divide 97,
+so it is prime.
+
+### The Sieve of Eratosthenes
+
+List integers from 2 to $n$. Cross out multiples of 2 (except 2), then multiples
+of 3 (except 3), then 5, 7, etc. What remains is prime.
+
+### Twin Primes and Small Patterns
+
+Pairs like $(11, 13)$ and $(17, 19)$ are twin primes. There's no formula, but
+recognizing them helps on the AMC 8.
+
+## Worked Example
+
+Is 91 prime?
+
+$\sqrt{91} < 10$. Check: $91/7 = 13$. So $91 = 7 \times 13$ — it is composite.
+
+## Practice Problems
+
+<Problems problems="practice" />

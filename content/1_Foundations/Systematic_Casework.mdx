@@ -1,0 +1,51 @@
+---
+id: systematic-casework
+title: Systematic Casework
+author: USAMO Guide Team
+description: Breaking complex word problems into mutually exclusive, non-overlapping scenarios.
+prerequisites: [counting-fundamentals]
+---
+
+<IncompleteSection />
+
+## Overview
+
+Casework is the strategy of splitting a counting problem into non-overlapping
+cases, solving each separately, and adding the results. The art lies in choosing
+the right variable to case on so that each case is easy to handle. This is one of
+the most versatile AMC 8 techniques.
+
+## Key Ideas
+
+- Cases must be **mutually exclusive** (no overlap) and **exhaustive** (cover
+  everything).
+- Choose the variable that creates the fewest, simplest cases.
+- Count each case, then sum.
+- Double-check: did your cases cover every possibility?
+
+## Core Skills
+
+### Choosing What to Case On
+
+If a problem involves choosing digits, case on the leading digit (to avoid zeros
+in the leading position).
+
+### Organizing Cases
+
+Use a table or list. Label cases clearly: Case 1, Case 2, etc.
+
+### Avoiding Overlap
+
+Make sure no outcome is counted in two different cases. Define boundaries
+precisely.
+
+## Worked Example
+
+How many two-digit numbers have digits that sum to 8?
+
+Case on the tens digit $t$ (where $t \ge 1$): $(1,7), (2,6), (3,5), (4,4),
+(5,3), (6,2), (7,1), (8,0)$. That is 8 numbers.
+
+## Practice Problems
+
+<Problems problems="practice" />

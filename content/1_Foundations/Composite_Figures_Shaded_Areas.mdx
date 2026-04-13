@@ -1,0 +1,54 @@
+---
+id: composite-figures-shaded-areas
+title: Composite Figures and Shaded Areas
+author: USAMO Guide Team
+description: Subtracting negative space from bounding shapes to find irregular areas.
+prerequisites: []
+---
+
+<IncompleteSection />
+
+## Overview
+
+Many AMC 8 geometry problems ask for the area of a weird shape. The trick is
+almost always to embed the weird shape inside a simple one (like a rectangle or
+circle) and then subtract the parts you don't want. This "negative space"
+strategy is one of the most powerful tools in contest geometry.
+
+## Key Ideas
+
+- **Bounding shape strategy**: enclose the region in a rectangle, triangle, or
+  circle whose area you can compute easily.
+- **Subtraction**: Shaded area = area of bounding shape − area of unshaded
+  pieces.
+- **Addition**: sometimes the shaded region is a union of simple shapes. Add
+  their areas and subtract overlaps.
+- Draw auxiliary lines to decompose complex figures into triangles and
+  rectangles.
+
+## Core Skills
+
+### Rectangle Minus Triangles
+
+A common pattern: a quadrilateral inscribed in a rectangle. Find the rectangle's
+area and subtract the corner triangles.
+
+### Circle Minus Polygon (and Vice Versa)
+
+Compute the area of a circle segment by subtracting a triangle from a sector.
+
+### Overlapping Regions
+
+When two shapes overlap, use inclusion-exclusion: $|A \cup B| = |A| + |B| - |A \cap B|$.
+
+## Worked Example
+
+A square of side 10 has a quarter-circle of radius 10 drawn in one corner. Find
+the area inside the square but outside the quarter-circle.
+
+Square area = $100$. Quarter-circle area = $\frac{1}{4}\pi(10)^2 = 25\pi$.
+Shaded = $100 - 25\pi$.
+
+## Practice Problems
+
+<Problems problems="practice" />

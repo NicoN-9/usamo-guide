@@ -1,0 +1,50 @@
+---
+id: prime-factorization
+title: Prime Factorization
+author: USAMO Guide Team
+description: The master key topic; deconstructing numbers into prime exponential components.
+prerequisites: [primes-and-composites]
+---
+
+<IncompleteSection />
+
+## Overview
+
+Every positive integer greater than 1 can be written uniquely as a product of
+prime powers (the Fundamental Theorem of Arithmetic). This decomposition is the
+master key to number theory on the AMC 8 — it unlocks divisor counting, GCD/LCM,
+and modular arithmetic.
+
+## Key Ideas
+
+- **Fundamental Theorem of Arithmetic**: every integer $n > 1$ has a unique
+  prime factorization $n = p_1^{a_1} p_2^{a_2} \cdots p_k^{a_k}$.
+- Build factor trees by repeatedly dividing by the smallest prime.
+- Knowing small prime factorizations by heart saves time: $72 = 2^3 \cdot 3^2$,
+  $360 = 2^3 \cdot 3^2 \cdot 5$.
+- Prime factorization is a prerequisite for GCD, LCM, and divisor counting.
+
+## Core Skills
+
+### Building Factor Trees
+
+Divide by 2 as many times as possible, then 3, then 5, etc.
+
+### Expressing in Exponential Form
+
+Write $180 = 2^2 \cdot 3^2 \cdot 5$ rather than $2 \times 2 \times 3 \times 3 \times 5$.
+
+### Factorizing Large Numbers
+
+Use divisibility rules to speed up the process. If a number is even, pull out
+2s. If the digit sum is divisible by 3, pull out 3s.
+
+## Worked Example
+
+Find the prime factorization of 1260.
+
+$1260 = 2 \times 630 = 2^2 \times 315 = 2^2 \times 3 \times 105 = 2^2 \times 3 \times 3 \times 35 = 2^2 \times 3^2 \times 5 \times 7$.
+
+## Practice Problems
+
+<Problems problems="practice" />

@@ -1,0 +1,51 @@
+---
+id: gcd-and-lcm
+title: GCD and LCM
+author: USAMO Guide Team
+description: Applying least common multiples to cyclical schedule and gear problems.
+prerequisites: [prime-factorization]
+---
+
+<IncompleteSection />
+
+## Overview
+
+The greatest common divisor (GCD) and least common multiple (LCM) appear
+throughout AMC 8 number theory and word problems. GCD tells you the largest
+number that divides two values; LCM tells you the smallest number both values
+divide into. Using prime factorization makes computing both quick and reliable.
+
+## Key Ideas
+
+- $\gcd(a, b)$ = product of shared prime factors with minimum exponents.
+- $\operatorname{lcm}(a, b)$ = product of all prime factors with maximum
+  exponents.
+- $\gcd(a, b) \times \operatorname{lcm}(a, b) = a \times b$.
+- **Euclidean algorithm**: $\gcd(a, b) = \gcd(b, a \mod b)$, repeated until the
+  remainder is 0.
+
+## Core Skills
+
+### GCD via Prime Factorization
+
+$\gcd(36, 48) = \gcd(2^2 \cdot 3^2,\; 2^4 \cdot 3) = 2^2 \cdot 3 = 12$.
+
+### LCM via Prime Factorization
+
+$\operatorname{lcm}(36, 48) = 2^4 \cdot 3^2 = 144$.
+
+### Word Problems
+
+"Two lights blink every 6 and 8 seconds. When do they next blink together?"
+$\operatorname{lcm}(6, 8) = 24$ seconds.
+
+## Worked Example
+
+Find $\gcd(84, 120)$ and $\operatorname{lcm}(84, 120)$.
+
+$84 = 2^2 \cdot 3 \cdot 7$, $120 = 2^3 \cdot 3 \cdot 5$.
+$\gcd = 2^2 \cdot 3 = 12$. $\operatorname{lcm} = 2^3 \cdot 3 \cdot 5 \cdot 7 = 840$.
+
+## Practice Problems
+
+<Problems problems="practice" />

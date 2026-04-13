@@ -1,0 +1,57 @@
+---
+id: base-number-systems
+title: Base Number Systems & Diophantine Equations
+author: USAMO Guide Team
+description: Converting non-base-10 systems; bounding linear equations for integer solutions.
+prerequisites: []
+---
+
+<IncompleteSection />
+
+## Overview
+
+This module covers two distinct but complementary AMC 8 topics. **Base-number
+systems** teach you to read and convert numbers written in bases other than 10
+(binary, octal, etc.). **Diophantine equations** are equations where only integer
+solutions are allowed — and the key technique is bounding the variables to find
+all possibilities.
+
+## Key Ideas
+
+- A number in base $b$ uses digits $0, 1, \ldots, b-1$. The place values are
+  $b^0, b^1, b^2, \ldots$ from right to left.
+- To convert base $b$ to base 10: multiply each digit by its place value and
+  sum.
+- To convert base 10 to base $b$: repeatedly divide by $b$ and collect
+  remainders.
+- A linear Diophantine equation $ax + by = c$ has integer solutions iff
+  $\gcd(a, b) \mid c$.
+- Bounding: if $x$ and $y$ are positive integers, use $x \ge 1$ and $y \ge 1$
+  to limit the search.
+
+## Core Skills
+
+### Base Conversion: Base b → Base 10
+
+$1011_2 = 1 \cdot 8 + 0 \cdot 4 + 1 \cdot 2 + 1 \cdot 1 = 11$.
+
+### Base Conversion: Base 10 → Base b
+
+Convert 25 to base 3: $25 = 8 \cdot 3 + 1$, $8 = 2 \cdot 3 + 2$,
+$2 = 0 \cdot 3 + 2$. So $25 = 221_3$.
+
+### Solving Diophantine Equations by Bounding
+
+How many ways can you pay 50 cents using only nickels and dimes?
+$5n + 10d = 50$, i.e., $n + 2d = 10$ with $n, d \ge 0$. Then $d$ can be
+$0, 1, 2, 3, 4, 5$ — six solutions.
+
+## Worked Example
+
+Convert $345_7$ to base 10.
+
+$3 \cdot 49 + 4 \cdot 7 + 5 \cdot 1 = 147 + 28 + 5 = 180$.
+
+## Practice Problems
+
+<Problems problems="practice" />

@@ -1,0 +1,51 @@
+---
+id: extremal-principle
+title: The Extremal Principle
+author: USAMO Guide Team
+description: Finding the theoretical maximum or minimum limits of a given scenario.
+prerequisites: []
+---
+
+<IncompleteSection />
+
+## Overview
+
+The extremal principle asks: what is the largest or smallest value something can
+achieve? On the AMC 8 this shows up as optimization — maximize the sum, minimize
+the product, find the best arrangement. The strategy is to push a variable to its
+extreme and see what happens.
+
+## Key Ideas
+
+- Identify what you are optimizing and what constraints exist.
+- Test boundary cases first: if $1 \le x \le 10$, check $x = 1$ and $x = 10$.
+- For integer problems, the extremes are often when one variable is as large (or
+  small) as possible.
+- Pair the extremal approach with common sense and answer-checking.
+
+## Core Skills
+
+### Maximizing a Sum or Product
+
+Under a constraint like $a + b = 10$, the product $ab$ is maximized when
+$a = b = 5$.
+
+### Minimizing with Integer Constraints
+
+Find the arrangement of integers that pushes the target quantity to its lowest
+value.
+
+### Boundary Testing
+
+When the problem says "at most" or "at least," test those boundaries.
+
+## Worked Example
+
+Find the largest possible product of two positive integers that sum to 20.
+
+If $a + b = 20$, then $ab = a(20-a) = -a^2 + 20a$. This is maximized at
+$a = 10$, giving $ab = 100$.
+
+## Practice Problems
+
+<Problems problems="practice" />

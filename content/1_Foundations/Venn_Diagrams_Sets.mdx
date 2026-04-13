@@ -1,0 +1,50 @@
+---
+id: venn-diagrams-sets
+title: Venn Diagrams and Basic Sets
+author: USAMO Guide Team
+description: Visually organizing overlapping data categories.
+prerequisites: []
+---
+
+<IncompleteSection />
+
+## Overview
+
+Venn diagrams are a visual way to organize overlapping categories. On the AMC 8,
+they appear in counting problems (how many students play both sports?) and in
+logical reasoning. Learning to fill them in systematically avoids double-counting
+errors.
+
+## Key Ideas
+
+- A two-circle Venn diagram has four regions: only $A$, only $B$, both $A$ and
+  $B$, and neither.
+- $|A \cup B| = |A| + |B| - |A \cap B|$ (inclusion-exclusion for two sets).
+- Fill from the inside out: start with the overlap region.
+- Three-circle Venn diagrams add more regions but follow the same principle.
+
+## Core Skills
+
+### Two-Set Venn Diagrams
+
+Given totals for each set and the overlap, find the number in each region.
+
+### Reading Word Problems into Venn Diagrams
+
+Translate phrases like "25 students play soccer, 18 play basketball, 7 play
+both" into a diagram.
+
+### Three-Set Problems
+
+The three-set version uses: $|A \cup B \cup C| = |A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|$.
+
+## Worked Example
+
+In a class of 30 students, 18 like math, 15 like science, and 8 like both. How
+many like neither?
+
+Students who like at least one = $18 + 15 - 8 = 25$. Neither = $30 - 25 = 5$.
+
+## Practice Problems
+
+<Problems problems="practice" />

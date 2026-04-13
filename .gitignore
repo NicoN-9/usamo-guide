@@ -94,3 +94,6 @@ build.css
 
 # storybook
 storybook-static/
+
+# Nested original repo
+usamo-guide/

@@ -1,0 +1,54 @@
+---
+id: units-digit-periodicity
+title: Units Digit Periodicity
+author: USAMO Guide Team
+description: Finding the last digit of large exponential expressions by identifying 4-step cycles.
+prerequisites: [modular-arithmetic-intro]
+---
+
+<IncompleteSection />
+
+## Overview
+
+What is the units digit of $7^{2025}$? You could try multiplying, but there is a
+much faster way: the units digits of powers cycle with a predictable period
+(almost always dividing 4). This module teaches you to find and exploit that
+cycle.
+
+## Key Ideas
+
+- The units digit of $a^n$ depends only on the units digit of $a$ and the value
+  of $n$ modulo the cycle length.
+- Every base has a units-digit cycle of length 1, 2, or 4:
+  - Cycle 1: digits 0, 1, 5, 6 (always the same).
+  - Cycle 2: digits 4, 9.
+  - Cycle 4: digits 2, 3, 7, 8.
+- To find the units digit of $a^n$: identify the cycle, then compute
+  $n \mod \text{(cycle length)}$.
+
+## Core Skills
+
+### Building the Cycle Table
+
+List $a^1, a^2, a^3, a^4$ and read off units digits until the pattern repeats.
+
+### Using Modular Reduction on the Exponent
+
+$7^{2025}$: the cycle is $7, 9, 3, 1$ (length 4). $2025 \mod 4 = 1$, so the
+units digit is 7.
+
+### Products and Sums of Large Powers
+
+Compute each units digit separately, then add or multiply and take the units
+digit of the result.
+
+## Worked Example
+
+Find the units digit of $3^{100}$.
+
+Cycle of 3: $3, 9, 7, 1$ (length 4). $100 \mod 4 = 0$, so we use the 4th
+position: units digit is 1.
+
+## Practice Problems
+
+<Problems problems="practice" />
