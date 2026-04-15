@@ -50,7 +50,7 @@ export default function AetherFlowHero(): JSX.Element {
       <div
         className="pointer-events-none absolute inset-0 z-0 scale-105 blur-[10px]"
         style={{
-          backgroundImage: "url('https://i.pinimg.com/736x/d0/9b/c0/d09bc0f0e04ef42b224edb44c77d0da1.jpg')",
+          backgroundImage: "url('https://i.pinimg.com/736x/b4/d7/31/b4d7313c871ef0e4b2a56b0bc1cd2c6c.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -81,7 +81,7 @@ export default function AetherFlowHero(): JSX.Element {
           </a>
 
           <p className="max-w-xl font-mono text-[11px] font-bold uppercase leading-relaxed tracking-[0.24em] text-[#F5F0FA] opacity-90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-            We are <strong className="font-bold text-[#FBF7FF]">open source</strong>. Star the repo if you think math is cool ;)
+            We are fully <strong className="font-bold text-[#FBF7FF]">open source</strong>. Star the repo if you think math is cool ;)
           </p>
         </div>
       </div>
@@ -154,7 +154,7 @@ export default function AetherFlowHero(): JSX.Element {
         >
           <div className="text-right">
             <p>Let&apos;s love maths together!</p>
-            <p>Join the Discord server :)</p>
+            <p>Join us at Discord</p>
             <p className="mt-1 text-white/50">https://discord.gg/X2zx6u53XH</p>
           </div>
         </a>

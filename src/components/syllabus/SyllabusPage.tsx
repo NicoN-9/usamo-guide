@@ -21,10 +21,10 @@ import ModuleLink from './ModuleLink';
 import TopNavigationBar from '../TopNavigationBar/TopNavigationBar';
 
 const HeroAccentColor: { [key in SectionID]: string } = {
-  foundations: 'from-[#2A1737] to-[#79566C]',
-  intermediate: 'from-[#311C40] to-[#7E5B72]',
-  advanced: 'from-[#281533] to-[#735266]',
-  usamo: 'from-[#24132E] to-[#76566B]',
+  foundations: 'from-[#09050D] to-[#160E1F]',
+  intermediate: 'from-[#0A0510] to-[#170F22]',
+  advanced: 'from-[#08040E] to-[#140C1C]',
+  usamo: 'from-[#07030C] to-[#120B19]',
 };
 
 const SECTION_DESCRIPTION: { [key in SectionID]: React.ReactNode } = {
@@ -129,7 +129,7 @@ export default function SyllabusPage({
         image={null}
         pathname={path}
       />
-      <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#171228] via-[#221737] to-[#73576A]">
+      <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#050308] via-[#090611] to-[#120A18]">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 opacity-30 [mask-image:radial-gradient(ellipse_at_center,white_30%,transparent_75%)]">
             <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
@@ -157,11 +157,11 @@ export default function SyllabusPage({
         <TopNavigationBar />
 
         <main>
-          <div className="relative py-12 sm:py-16">
+            <div className="relative py-12 sm:py-16">
             <div
               className={`absolute inset-x-0 top-0 h-full bg-gradient-to-br ${HeroAccentColor[division]} opacity-90`}
             />
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-full bg-[radial-gradient(circle_at_80%_20%,rgba(244,237,234,0.10),transparent_28%),radial-gradient(circle_at_20%_80%,rgba(201,140,171,0.14),transparent_34%)]" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-full bg-[radial-gradient(circle_at_80%_20%,rgba(201,140,171,0.08),transparent_28%),radial-gradient(circle_at_20%_80%,rgba(112,66,138,0.16),transparent_34%)]" />
 
             <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <h1 className="mb-6 text-center text-5xl leading-10 font-black tracking-tight text-[#F4EDEA] sm:leading-none md:text-6xl">
