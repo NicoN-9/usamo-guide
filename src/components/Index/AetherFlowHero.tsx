@@ -148,7 +148,7 @@ export default function AetherFlowHero(): JSX.Element {
               .51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
               0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
           </svg>
-          <span>GitHub</span>
+          <span>Star us on Github</span>
         </div>
 
         <p className="max-w-xl font-mono text-[11px] font-bold uppercase leading-relaxed tracking-[0.24em] text-[#F5F0FA] opacity-90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
