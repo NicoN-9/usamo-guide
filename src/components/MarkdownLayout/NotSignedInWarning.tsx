@@ -35,20 +35,21 @@ export default function NotSignedInWarning() {
                   </p>
                 </div>
                 <div className="mt-5">
-                  <span className="inline-flex rounded-md shadow-sm">
-                    <button
-                      type="button"
-                      onClick={() => signIn()}
-                      className="inline-flex items-center rounded-md border px-4 py-2 text-sm leading-5 font-medium transition duration-150 ease-in-out focus:outline-hidden"
-                      style={{
-                        borderColor: 'rgba(112, 66, 138, 0.46)',
-                        backgroundColor: '#70428A',
-                        color: '#F4EDEA',
-                      }}
-                    >
-                      Save Progress
-                    </button>
-                  </span>
+                  <button
+                    type="button"
+                    onClick={() => signIn()}
+                    className="purple-motion-effect inline-flex items-center justify-center rounded-full px-6 py-2.5 font-mono text-sm font-bold leading-tight focus:outline-hidden"
+                    style={{
+                      border: '1px solid rgba(240, 194, 255, 0.34)',
+                      background: 'linear-gradient(135deg, #5A2F87 0%, #C58BFF 100%)',
+                      boxShadow: 'none',
+                      '--pme-color': '#F4EDEA',
+                      '--pme-hover-color': '#201C36',
+                      '--pme-wipe-bg': '#F0C2FF',
+                    } as React.CSSProperties}
+                  >
+                    Save Progress
+                  </button>
                 </div>
               </div>
               <img
