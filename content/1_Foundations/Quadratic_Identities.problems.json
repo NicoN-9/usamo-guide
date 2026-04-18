@@ -14,6 +14,19 @@
         "kind": "none"
       }
     },
+	{
+      "uniqueId": "1986-IMO-1",
+      "name": "Problem 1 (1986 IMO)",
+      "url": "https://artofproblemsolving.com/wiki/index.php/1986_IMO_Problems/Problem_1?srsltid=AfmBOooiis2jSGClymdEXI4GNaEhzV1s-ElIsq2jrtlVMai7D848jAj1",
+      "source": "IMO",
+      "difficulty": "Hard",
+      "isStarred": false,
+      "tags": ["Diffence of Squares","Infinite Descent"],
+      "statement": "Let $d$ be any positive integer not equal to 2,5, or 13. Show that one can find distinct $a$ and $b$ in the set ${2,5,13,d}$ such that $ab-1$ is not a perfect square.",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
     {
       "uniqueId": "2024-amc10a-11",
       "name": "Problem 11 (2024 AMC 10A)",

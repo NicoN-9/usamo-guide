@@ -39,7 +39,7 @@ introduce few common pitfalls about the definition of functions:
 - $f$ does not need to be continuous.
 
 So think $f$ as an arrow rather than a manipulation. And indeed there's some
-problem that have a ``strange'' solution which seems like it came out of
+problem that have a "strange" solution which seems like it came out of
 nowhere. Let us show some examples: some (real olympiad!) problem have solutions
 with
 
@@ -71,7 +71,7 @@ $$
 
 _where $S$ is any subset of $(-\infty, -\frac 23)$._
 
-These are often called as ``monster FE'', and we'll cover this in another
+These are often called as "monster FE", and we'll cover this in another
 module.
 
 Still in other words, $f$ is just an _assignment_. Some examples are:
@@ -82,7 +82,32 @@ Still in other words, $f$ is just an _assignment_. Some examples are:
 - You get $f(x)=x$ for all $x>1$, but somehow feel stuck from there. It might
   suddenly be $f(1)=0$ works?
 
-## injectivity and surjectivity
+## Common techniques
+
+From this section we introduce some techniques in FE that is used on most of the problem, step by step . 
+
+### Guessing the solution 
+
+When you solve a typical FE problem, 
+**start by guessing the solution**. 
+At least plug in $f(x)=kx+c$ and find all linear solutions that works. 
+By doing that, you can have some conjectures and 
+it will be a nice hint solving a problem. 
+(But always expect a monster!)
+
+### Pin down some values 
+
+After guessing the solution, **try pinning down some values** 
+(e.g. $f(0)=0$). This will help you since classical FE problem 
+has usually two or more variables. 
+
+### Substitution
+
+After that, **inserting some special values** might be helpful. 
+For example, if you have $f(0)=0$ and there's a $f(x+y)$ term in the equation, 
+you might do $y=-x$ to cancel that. 
+
+### injectivity and surjectivity
 
 Let us introduce new words: In what follows, let $f\colon X\rightarrow Y$ be a
 function.
@@ -110,12 +135,28 @@ More description about injectivity and surjectivity:
 - If $f$ is injective, it means we can take away $f$ covered from both sides,
   e.g. $$f(f(x)+1)=f(f(x+1)-1)\implies f(x)+1=f(x+1)-1$$.
 - If $f$ is surjective, it is useful to assume that $f(u)=0$ (or $1$ or
-  whatever) for some $u$. Sometimes it cancels out a lot of things inserting
-  $u$.
+  whateve looks useful) for some $u$. Sometimes it cancels out a lot of things by inserting $u$.
 
-## Example 
+## Example 1 - Involution function
 
-TODO
+Since FE is quite difficult to get a sense of it, we'll give an easy (but notable!) walkthrough first. 
+
+- A function $f\colon \mathbb R\rightarrow \mathbb R$ satisfies $f(f(x))=x$ for all $x\in \mathbb R$. Show that $f$ is bijective. 
+
+These $f$ are called an *involution* and it sometimes appears in a solution. 
+
+I recommend to solve this (and any example problems) before looking the solution. 
+
+### Solution 1 - Involution function 
+First, we have $f$ injective; assume that $a, b\in \mathbb R$ with $f(a)=f(b)$. Then we have 
+$$
+a=f(f(a))=f(f(b))=b 
+$$ 
+as needed. To show that $f$ is surjective, note that RHS moves over $\mathbb R$ so $f$ does as well. 
+
+## Example 2 
+
+TODO 
 
 ## Practice Problems
 

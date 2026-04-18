@@ -36,7 +36,7 @@
     {
       "uniqueId": "test-inline-integer",
       "name": "TEST: Solve for x (Integer Answer)",
-      "url": "https://usamo.guide/test/algebra-solve-x",
+      "url": "https://usamoguide.com/test/algebra-solve-x",
       "source": "Custom",
       "difficulty": "Very Easy",
       "isStarred": false,
@@ -60,7 +60,7 @@
     {
       "uniqueId": "test-inline-mcq-correct",
       "name": "TEST: Binomial Expansion",
-      "url": "https://usamo.guide/test/algebra-binomial",
+      "url": "https://usamoguide.com/test/algebra-binomial",
       "source": "Custom",
       "difficulty": "Easy",
       "isStarred": false,
@@ -90,7 +90,7 @@
     {
       "uniqueId": "test-inline-proof",
       "name": "TEST: Proof Problem (No Answer UI)",
-      "url": "https://usamo.guide/test/algebra-amgm",
+      "url": "https://usamoguide.com/test/algebra-amgm",
       "source": "Custom",
       "difficulty": "Normal",
       "isStarred": false,

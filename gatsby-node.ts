@@ -384,7 +384,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   let problemSlugs = {}; // maps slug to problem unique ID
   let problemInfo = {}; // maps unique problem ID to problem info
   let problemURLToUniqueID = {}; // maps problem URL to problem unique ID
-  let urlsThatCanHaveMultipleUniqueIDs: string[] = [];  problems.forEach(({ node }) => {
+  let urlsThatCanHaveMultipleUniqueIDs: string[] = [
+    'https://usamoguide.com/',
+  ];
+  problems.forEach(({ node }) => {
     let slug = getProblemURL(node);
     if (
       problemSlugs.hasOwnProperty(slug) &&

@@ -4,7 +4,7 @@
     {
       "uniqueId": "test-pythagorean",
       "name": "TEST: Pythagorean Theorem",
-      "url": "https://usamo.guide/test/pythagorean",
+      "url": "https://usamoguide.com/test/pythagorean",
       "source": "Custom",
       "difficulty": "Very Easy",
       "isStarred": true,
@@ -29,7 +29,7 @@
     {
       "uniqueId": "test-special-45-45-90",
       "name": "TEST: 45-45-90 Triangle",
-      "url": "https://usamo.guide/test/special-triangle",
+      "url": "https://usamoguide.com/test/special-triangle",
       "source": "Custom",
       "difficulty": "Easy",
       "isStarred": false,
