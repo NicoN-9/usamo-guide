@@ -28,7 +28,7 @@ Suppose there are $n$ people, each of whom has a name tag. The name tags are shu
 #### Solution
 Label the people $1,2,...,n$. The trick here is to define the *indicator variable* $X_i$ to be 0 if person $i$ does not get his name tag and 1 if person $i$ does get his name tag. Notice that $X_1+X_2+\cdot\cdot\cdot+X_n$ is just the number of people who got their own name tag.
 
-> Using indicator variables which take on a value of 0 or 1 is a common trick, sinec it allows us to transform counting problems into expected value problems.
+> Using indicator variables which take on a value of 0 or 1 is a common trick, since it allows us to transform counting problems into expected value problems.
 
 $E[X_i]=\frac{1}{n}$, as each person has a $\frac{1}{n}$ probability of getting their own name tag. Hence the expected number of people who got their own name tag is $E[X_1+X_2+\cdot\cdot\cdot+X_n]=E[X_1]+E[X_2]+\cdot\cdot\cdot+E[X_n]=n\cdot\frac{1}{n}=\boxed{1}$.
 
@@ -47,6 +47,8 @@ There are $29$ pairs of consecutive integers, namely $p_1 = \{1,2\}, p_2=\{2,3\}
 For any given pair $p_i$, there are $\binom{28}{3}$ possible subsets that include $p_i$ out of a possible $\binom{30}{5}$ subsets. So the probability that $p_i$ is included in the subset is $\frac{\binom{28}{3}}{\binom{30}{5}}=\frac{1}{29}\cdot\frac{2}{3}$. Hence $E[X_i]=\frac{1}{29}\cdot\frac{2}{3}$
 
 Then $E[X_1+X_2+\cdot\cdot\cdot+X_{29}]=E[X_1]+E[X_2]+\cdot\cdot\cdot+E[X_{29}]=29\cdot\frac{1}{29}\cdot\frac{2}{3}=\boxed{\frac{2}{3}}$
+
+>Expected value can be an extremely powerful tool for counting problems, as you can see by taking a look at the [solutions to this problem that don't use expected value](https://artofproblemsolving.com/wiki/index.php/2021_Fall_AMC_12B_Problems/Problem_23). Linearity of expectation allows us to break apart a complicated structure into simple parts without worrying about how they will affect each other.
 
 <!-- probably too hard for intermediate level
 ### Worked Example #3 (1991 Canada MO #2)
