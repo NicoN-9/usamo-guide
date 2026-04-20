@@ -1,39 +1,39 @@
 ---
-id: vieta-root-jumping
-title: Vieta Root Jumping
-author: USAMO Guide Team
+id: vieta-jumping
+title: Vieta Jumping
+author: Lalith
 description: Vieta jumping or root flipping, application to problems, and proof
-prerequisites: ["vieta-formulas", "number-theory-intermediate"]
+prerequisites: ["vieta-formulas", "number-theory-intermediate","Fermat's Infinite descent"]
 ---
 
 ## Overview
 
-Vieta Jumping (also called root flipping) is an advanced technique for Diophantine equations. It applies when a rational expression in positive integers is asserted to equal an integer $k$, and the relation can be rearranged into a quadratic in one variable. The idea is that if $(a, b)$ is a solution, Vieta's formulas produce a second root $x$ that is also an integer, still paired with $b$, but strictly smaller than $a$. Since positive integers cannot decrease indefinitely, this forces either a contradiction or a checkable base case.
+Vieta Jumping (also called root flipping) is an advanced technique where we perform fermats's infinite descent with the usual goal of showing there exists finite solutions to a diophantine equations however with a twist where the descent is performed on the roots of a quadriatic expression where the roots are usually the solutions to the equation. The roots are found by vieta and hence the name 'Vieta Jumping'.
 
 ---
 
 ## Key Idea
+First we have a diophantine equation which is **symmetric** and we want to perform the vita jump on it. Let us represent this by $f(a,b)=k$ with degree 2. Degree 1 is left out as that will result a linear diophantine equation which can be solved by standard methods. Now we can form a quadriatic equation with either $a$ or $b$ as the subject and $k$ as the value of the diophantine equation.
 
-Suppose we have a relation involving positive integers $a, b$ and an integer $k$, which rearranges into a quadratic in $t$:
+One such example is shown below
+
+$$a^2 - (kb)\,a + (b^2 - k) = 0$$
+
+We know that any quadriatic equation has 2 roots. Hence we know there is another solution to the equation we constructed before. Let the equations subject be represented by $t$ where the roots of it are $a$ and $x$.
 
 $$t^2 - (kb)\,t + (b^2 - k) = 0$$
 
-The known value $a$ is one root. Let $x$ denote the other. Vieta's formulas give:
+ Clearly $x$ is also a value that satisfies $f(x,b)=k$. A important step is to make sure that $x < a$, $x \in \mathbb{Z}$ and that $x>0$ which can be proven using simple inequalities(We find the value of $x$ via vieta's relations). Else we cannot perform a descent. 
+ 
+ Okay we got $(x,b)$ as a solution, now what? well we can again make the quadriatic equation but this time with $b$ as the subject! and there will be no problems since the equation is symmetric in the first place. This is sufficient to show a descent and after that we continue with the standard fermat's descent to find the solutions, prove the solution set is finite or for contradiction.
+(The most popular is contradiction, which is outlined below)
 
-$$x + a = kb \implies x = kb - a$$
-$$x \cdot a = b^2 - k \implies x = \frac{b^2 - k}{a}$$
-
-**The first expression** proves $x \in \mathbb{Z}$ (since $k, a, b$ are all integers).
-
-**The second expression** is used to bound $x$ and establish $x < a$, which produces the descent.
-
-The two expressions give different information about the same quantity; combining them is what drives the argument.
 
 ---
 
 ## Steps to Reproduce
 
-Here is the standard structure of a Vieta Jumping argument:
+Here is the standard structure of a Vieta Jumping argument (This is only for reference and not for forced memorisation):
 
 1. **Define $k$.** Let $k = f(a,b)$ where $f$ is the expression asserted to be an integer (or a specific value).
 2. **Fix $k$, take the minimal pair.** Among all pairs $(a, b)$ of positive integers with $f(a, b) = k$, choose the one minimizing $a + b$ (or just $a$ after WLOG $a \geq b$).
