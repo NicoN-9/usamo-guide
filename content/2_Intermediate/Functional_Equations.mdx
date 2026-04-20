@@ -1,7 +1,7 @@
 ---
 id: functional-equations
 title: Functional Equations (Intro)
-author: USAMO Guide Team
+author: Lalith
 description: Substitution and pattern-spotting in simple functional equations.
 prerequisites: []
 ---
@@ -9,12 +9,12 @@ prerequisites: []
 ## Overview
 
 AMC and AIME functional equations usually test algebraic manipulation and
-strategic substitution rather than heavy theory.
+strategic substitution rather than heavy theory. Here you are given a function and our aim is to deduce what the function can be based on the given relationship
 
 ## Key Ideas
 
-- Plug in special values like $x=0$, $y=0$, $y=x$, and $y=-x$.
-- Check linear candidates: $f(x)=cx$, $f(x)=x+c$, $f(x)=cx+d$.
+- Plug in special values like $x=0$, $y=0$, $y=x$, and $y=-x$. These will result in values for $f(0)$ and give out a relationship of the function but in one variable
+- Check linear candidates: $f(x)=cx$, $f(x)=x+c$, $f(x)=cx+d$. However be cautious in checking there are no other candidates for the function(Check both the ways)
 - Use symmetry in the equation to deduce parity or linearity.
 
 ## Core Skills
@@ -22,17 +22,18 @@ strategic substitution rather than heavy theory.
 ### Use Strategic Substitution
 
 Plugging in $0$, $1$, $x$, $-x$, or $y=-x$ often isolates constants or shows
-that $f$ is even/odd.
+that $f$ is even/odd. Even though parity may seem like a triviial aspect, it can sometimes eliminate multiple cases. The above substitutions allows us to make a relationship of that equation but in only one variable, simplifying the situation or give out values for $f(0)$ or $f(1)$
+
 
 ### Test Simple Families
 
 Try constant, linear, or multiplicative candidates. Many contest problems are
-designed so a small family works.
+designed so that a small family works. Then check that each candidate satisfies the original relationship. Ensure that the domain **does not interfere**.
 
 ### Build a Table of Values
 
 Once $f(0)$ or $f(1)$ is found, use the equation to compute $f(2)$, $f(3)$,
-and detect a pattern.
+and detect a pattern. Then test base cases before proving in both the directions
 
 ## Worked Example
 
@@ -74,6 +75,7 @@ Try $f(x)=ax+b$. Then $ax+ay+b = ax+b+ay+b+2$ gives $b=-2$. So $f(x)=ax-2$.
 - Assuming continuity without checking the problem statement.
 - Forgetting to verify candidate functions.
 - Overlooking constant solutions.
+- Ensure there is no domain class while lloking for candidates
 
 ## Practice Problems
 
