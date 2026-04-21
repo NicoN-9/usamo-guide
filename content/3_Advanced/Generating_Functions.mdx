@@ -6,6 +6,8 @@ description: Translate counting into algebra using power series.
 prerequisites: ["counting-advanced", "advanced-algebra"]
 ---
 
+<!-- Based on generatingfunctionology: https://www2.math.upenn.edu/~wilf/gfologyLinked2.pdf-->
+
 ## Overview
 
 Generating functions encode sequences into algebraic objects. Even simple
@@ -34,9 +36,33 @@ coefficients.
 
 When only low-degree terms matter, ignore higher powers after expansion.
 
-###Representations
+### Representations
 
 Represent numbers such as cost or amount in the power. (e.g. an apple that costs 50 is represented as $x^{50}$)
+
+### Recurrence Formula
+
+<!-- WIP -->
+When given a recurrence formula that is to be solved by using generating functions, use the following method:
+1. Make sure that the values of the variable (e.g. $n$) such that the recurrence relation is true, is clearly described
+2. Give a name to the generating function that you will look for, and
+write out that function in terms of the unknown sequence (e.g.,
+call it A(x), and define it to be P
+n≥0 anxn).
+
+3. Multiply both sides of the recurrence by xn, and sum over all
+values of n for which the recurrence holds.
+4. Express both sides of the resulting equation explicitly in terms of
+your generating function A(x).
+5. Solve the resulting equation for the unknown generating function
+A(x).
+6. If you want an exact formula for the sequence that is defined by
+the given recurrence relation, then attempt to get such a formula
+by expanding A(x) into a power series by any method you can
+think of. In particular, if A(x) is a rational function (quotient
+of two polynomials), then success will result from expanding in
+partial fractions and then handling each of the resulting terms
+separately.
 
 ## Worked Example
 
