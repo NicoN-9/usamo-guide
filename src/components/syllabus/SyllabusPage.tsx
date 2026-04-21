@@ -195,7 +195,7 @@ export default function SyllabusPage({
                   Continue Learning &gt;
                 </Link>
                 <a
-                  href="https://discord.gg/X2zx6u53XH"
+                  href="https://discord.gg/WZge4DWUuy"
                   target="_blank"
                   rel="noreferrer"
                   className="purple-motion-effect inline-flex items-center justify-center rounded-full px-6 py-3 md:px-8 md:py-3 font-mono text-lg font-bold leading-tight"

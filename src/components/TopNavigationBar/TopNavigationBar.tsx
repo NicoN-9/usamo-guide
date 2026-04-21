@@ -125,7 +125,7 @@ export default function TopNavigationBar({
           <Banner
             text="Join the USAMO Guide Discord Server. Regular updates are posted there!"
             action="Let me Join!"
-            link="https://discord.gg/X2zx6u53XH"
+            link="https://discord.gg/WZge4DWUuy"
           />
         </>
       )}

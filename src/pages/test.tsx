@@ -216,7 +216,7 @@ export default function IndexPage({ path }): JSX.Element {
                   Check out our GitHub →
                 </a>
                 <a
-                  href="https://discord.gg/X2zx6u53XH"
+                  href="https://discord.gg/WZge4DWUuy"
                   target="_blank"
                   rel="noreferrer"
                   className={linkTextStyles}

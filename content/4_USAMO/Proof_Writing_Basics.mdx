@@ -297,10 +297,37 @@ Here's a short section about writing in the contest.
 
 ## Example
 
-**Question**
-Let a and b be natural numbers such that 
+**Question.**
+How many prime numbers $p$ are there such that $29^p+1$ is a multiple of p?
 
+**Answer.**
+There are $3$ such prime numbers
 
+Case 1:
+
+Now let us assume that $p\ne29$. Then we observe that the Greatest Common divisor of $p$ and $29$ is 1.
+
+ The key idea here is to use$\boxed{Fermat's\;Little\;Theorem}$ to get:
+$$
+29^{p-1} \equiv 1\:(mod\:p) \implies 29^p \equiv 29\:(mod\:p)
+$$
+Hence we need:
+$$
+29^p+1\equiv30\equiv0\:(mod\:p) \implies p\mid30
+$$
+$p=2,3\:and\:5$ satisfies the condition which is of 3 primes in total.
+
+Case 2:
+
+For $p=29$, we know that
+$$
+p\mid29^p
+$$
+Thus
+$$
+p\nmid 29^p+1
+$$
+And we are done
 ## Practice Problems
 
 <Problems problems="practice" />
