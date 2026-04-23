@@ -9,7 +9,7 @@ prerequisites: []
 ## Overview
 
 Sophie Germain is the standard way to factor a sum of two fourth powers when
-one coefficient is $4$.
+one coefficient is $4$. It mostly appears in AIME and is usually an intermediate step
 
 ## Key Ideas
 
@@ -22,40 +22,41 @@ one coefficient is $4$.
 ### Confirm the Coefficient
 
 The identity applies only when the coefficient of $y^4$ is $4$. Factor out
-constants first to match this pattern.
+constants first to match this pattern. This can be useful to perform cancellations and to avoid messy calculations which can cost valuable time
 
 ### Use Difference of Squares
 
-Recognize $x^4+4y^4$ as $(x^2+2y^2)^2-(2xy)^2$ to factor quickly.
+Recognize $x^4+4y^4$ as $(x^2)^2+(2y^2)^2$. Then $x^4+4y^4=(x^2)^2+(2y^2)^2+4x^2y^2-(4xy)^2=(x^2+2y^2-4xy)(x^2+2y^2+4xy)$
 
 ### Look for Substitutions
 
 If the expression is not in the exact form, set $x$ or $y$ as a binomial
-to create the pattern.
+to create the pattern. This will help us to use sophie Germain Identity
 
 ## Worked Example
+
+### Basic Factoring
 
 Factor $a^4 + 4$.
 
 Write $a^4 + 4 = a^4 + 4\cdot 1^4$ and apply the identity:
 $(a^2 - 2a + 2)(a^2 + 2a + 2)$.
 
-## More Examples
 
-### Example 1: Factor a Constant
+### Factor a Constant
 
 Factor $16x^4 + 4y^4$.
 
 Factor out $4$ first to match the Sophie Germain pattern, then apply the
 identity.
 
-### Example 2: Binomial Substitution
+### Binomial Substitution
 
 Factor $(x^2+1)^2 + 4x^2$.
 
 Treat it as $a^4+4b^4$ with $a=x^2+1$ and $b=x$.
 
-### Example 3: Integer Check
+### Integer Check
 
 Factor $81 + 4y^4$.
 
