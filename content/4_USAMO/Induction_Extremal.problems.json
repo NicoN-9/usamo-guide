@@ -1,36 +1,44 @@
 {
-  "MODULE_ID": "induction-extremal",
+  "MODULE_ID": "introduction-to-function-equations",
   "practice": [
     {
-      "uniqueId": "usamo-2014-2",
-      "name": "Problem 2 (2014 USAMO)",
-      "url": "https://artofproblemsolving.com/wiki/index.php/2014_USAMO_Problems/Problem_2",
-      "source": "USAMO",
-      "difficulty": "Insane",
+      "uniqueId": "canada-2015-1",
+      "name": "Canada 2015/1",
+      "url": "https://aops.com/community/c6h1181540p5720240$0",
+      "source": "Canada",
+      "difficulty": "easy",
       "isStarred": true,
-      "tags": [
-        "Induction",
-        "Extremal"
-      ],
-      "statement": "This is a 2014 USAMO problem focusing on induction and extremal arguments. See the full problem statement on [AoPS](https://artofproblemsolving.com/wiki/index.php/2014_USAMO_Problems/Problem_2).",
+      "tags": ["Induction"],
+      "statement": "Find all functions $f\\colon \\mathbb{Z}_{>0}\rightarrow \\mathbb{Z}_{>0}$, such that $(n-1)^2<f(n)f(f(n))<n^2+n$ for every positive integer $n$.", 
       "solutionMetadata": {
         "kind": "none"
       }
-    },
+    }, 
     {
-      "uniqueId": "usamo-2010-2",
-      "name": "Problem 2 (2010 USAMO)",
-      "url": "https://artofproblemsolving.com/wiki/index.php/2010_USAMO_Problems/Problem_2",
-      "source": "USAMO",
-      "difficulty": "Very Hard",
+      "uniqueId": "imo-2013-1",
+      "name": "IMO 2013/1",
+      "url": "https://aops.com/community/c6h1181540p5720240$0",
+      "source": "IMO",
+      "difficulty": "medium",
       "isStarred": false,
-      "tags": [
-        "Induction"
-      ],
-      "statement": "This is a 2010 USAMO problem focusing on induction. See the full problem statement on [AoPS](https://artofproblemsolving.com/wiki/index.php/2010_USAMO_Problems/Problem_2).",
+      "tags": ["Induction"],
+      "statement": "Assume that $k$ and $n$ are two positive integers. Prove that there exist positive integers $m_1 , \\dots , m_k$ such that $$1+\\frac{2^k-1}{n}=\\left(1+\\frac1{m_1}\\right)\\cdots \\left(1+\\frac1{m_k}\\right).$$", 
       "solutionMetadata": {
         "kind": "none"
       }
-    }
+    }, 
+    {
+      "uniqueId": "usamo-2009-2",
+      "name": "USAMO 2009/2",
+      "url": "https://aops.com/community/c5h274370p1485139$0",
+      "source": "USAMO",
+      "difficulty": "hard",
+      "isStarred": false,
+      "tags": ["Induction"],
+      "statement": "Let $n$ be a positive integer.  Determine the size of the largest subset of $\\{ -n, -n+1, \\dots, n-1, n\\}$ which does not contain three elements $a$, $b$, $c$ (not necessarily distinct) satisfying $a+b+c=0$..", 
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    } 
   ]
 }
