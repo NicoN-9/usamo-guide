@@ -1,0 +1,58 @@
+---
+id: divisibility-primes
+title: Divisbility and the Prime Numbers
+author: Aaron He
+description: Divisbility, primes and composites, prime factorization
+prerequisites: []
+---
+
+## Divisibility
+Number theory is concerned with perhaps the most fundamental objects in math: the integers. And one of the most fundamental concepts in number theory is **divisibility**.
+
+We say that an integer $n$ is **divisible by** an integer $m$ if there exists an integer $k$ such that $n = km$. (In other words $\frac{n}{m}$ is an integer.)
+The following phrases all mean the same thing:
+* $n$ is **divisible by** $m$
+* $m$ **divides** $n$
+* $m$ is a **divisor** of $n$
+* $m$ is a **factor** of $n$
+* $n$ is a **multiple** of $n$
+In mathematical notation, this is written as $m\mid n$. If $m$ is not divisible by $n$, we can write $m \nmid n$.
+
+*Examples:* $2\mid-4, -16\mid32, 3\mid87, 4\mid616, -5\nmid6, 67\nmid1434$
+
+We call representation of an integer as the product of several of its factors a **factorization**. For example, $28=2\cdot2\cdot7$ is a factorization of 28.
+## Primes and Composites
+A **prime number** is a positive integer greater than 1 that has exactly two positive divisors: 1 and itself. A **composite number** is a positive integer greater than 1 with more than two positive divisors. *1 is not considered prime or composite.* Also, notice that 2 is the only even prime number. It can be proven that there are an infinite number of primes.
+
+*Examples of primes:* 2, 3, 19, 101
+*Examples of composites:* 4, 10, 90, 249
+
+It's often helpful to know by heart the 25 prime numbers under 100: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97.
+## Prime Factorization
+Prime numbers are so important to number theory mainly because of the **Fundamental Theorem of Arithmetic**, which states that:
+
+Every positive integer has a unique **prime factorization** (i.e. a factorization with only prime factors). In other words we can write any positive integer $n$ as $n=p_1^{e_1}p_2^{e_2}\cdot\cdot\cdot p_k^{e_k}$, where $p_1,p_2,...,p_k$ are primes and exponents $e_1,e_2,...,e_k$ are positive integers.
+
+For example, the prime factorization of 28 is $2^2\times7$.
+## Sieve of Eratosthenes
+To list all the primes under a number $n$ quickly, we can use an algorithm called the **sieve of Eratosthenes**. It works like this:
+1. Start with a list of consecutive integers from 2 to $n$.
+2. Mark the next unmarked number as prime.
+3. Cross out all of this number's multiples
+4. Repeat steps 2 and 3 until all the numbers have been marked
+At the end, we will have marked all of the primes and crossed out all of the composites.
+
+*Exercise:* Use the sieve of Eratosthenes to find all primes under 30. Try to understand why this algorithm works. In particular, why is the next unmarked number prime?
+## Primality Testing
+To check if a number $n$ is prime, it suffices to check divisibility by all prime numbers up to $\sqrt{n}$. If none of those numbers are divisors of $n$, then $n$ must be prime.
+
+For example, to check if 97 is prime, we first observe that $\sqrt{97}<10$. We can then check the primes under 10, which are 2, 3, 5, and 7, none of which are divisors of 97. Hence 97 is prime.
+
+*Exercise:* Try to understand why this works. In particular, why must a composite number $n$ have a prime factor under $\sqrt{n}$?
+## Worked Example
+If $m$ is prime and $n$ is composite, which of the following must be composite?
+$\textbf{(A)}\ m+n \qquad \textbf{(B)}\ n+2m \qquad \textbf{(C)}\ 2(n-m) \qquad \textbf{(D)}\ 2(n+m) \qquad \textbf{(E)}\ m-n$
+
+The answer is $\boxed{\textbf{(D)}\ 2(n+m)}$. $2(n+m)$ is even, and it is clearly greater than 2, so it must be composite.
+
+*Exercise:* Figure out why the other answer choices don't work.
