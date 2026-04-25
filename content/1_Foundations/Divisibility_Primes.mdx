@@ -49,10 +49,20 @@ To check if a number $n$ is prime, it suffices to check divisibility by all prim
 For example, to check if 97 is prime, we first observe that $\sqrt{97}<10$. We can then check the primes under 10, which are 2, 3, 5, and 7, none of which are divisors of 97. Hence 97 is prime.
 
 *Exercise:* Try to understand why this works. In particular, why must a composite number $n$ have a prime factor under $\sqrt{n}$?
-## Worked Example
+## Worked Example #1
 If $m$ is prime and $n$ is composite, which of the following must be composite?
 $\textbf{(A)}\ m+n \qquad \textbf{(B)}\ n+2m \qquad \textbf{(C)}\ 2(n-m) \qquad \textbf{(D)}\ 2(n+m) \qquad \textbf{(E)}\ m-n$
-
+### Solution
 The answer is $\boxed{\textbf{(D)}\ 2(n+m)}$. $2(n+m)$ is even, and it is clearly greater than 2, so it must be composite.
 
 *Exercise:* Figure out why the other answer choices don't work.
+## Worked Example #2 (2017 AMC 8 #8)
+Malcolm wants to visit Isabella after school today and knows the street where she lives but doesn't know her house number. She tells him, "My house number has two digits, and exactly three of the following four statements about it are true."
+1. It is prime.
+2. It is even.
+3. It is divisible by 7.
+4. One of its digits is 9.
+
+This information allows Malcolm to determine Isabella's house number. What is it?
+### Solution
+Let Isabella's house number be $n$. If the first statement is true, then $n$ is a prime even number or a prime number divisible by 7. This means that $n$ is 2 or 7, which is impossible since $n$ is two digits. Hence, the first statement must be false, so the other three must be true. So $n$ is a multiple of 14, and we can go through all two-digit multiples of 14 to find $n = \boxed{98}$.
