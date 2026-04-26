@@ -49,27 +49,28 @@ Represent numbers such as cost or amount in the power.
 <!-- Based on generatingfunctionology: https://www2.math.upenn.edu/~wilf/gfologyLinked2.pdf-->
 
 When given a recurrence formula that is to be solved by using generating functions, use the following method:
-1. Make sure that the values of the variable (e.g. $n$) such that the recurrence relation is true, is clearly described
+1. Make sure that the values of the variable (e.g. $n$) such that the recurrence 
+  relation is true, is clearly described
 2. Give a name to the generating function that you will look for, and
-write out that function in terms of the unknown sequence (e.g.,
-call it $A(x)=\sum_{n \ge 0} a_nx^n$).
+  write out that function in terms of the unknown sequence (e.g.,
+  call it $A(x)=\sum_{n \ge 0} a_nx^n$).
 
 3. Multiply both sides of the recurrence by $x^n$, and sum over all
-values of $n$ for which the recurrence holds.
+  values of $n$ for which the recurrence holds.
 
 4. Express both sides of the resulting equation explicitly in terms of
-your generating function $A(x)$.
+  your generating function $A(x)$.
 
 5. Solve the resulting equation for the unknown generating function
-$A(x)$.
+  $A(x)$.
 
 6. If you want an exact formula for the sequence that is defined by
-the given recurrence relation, then attempt to get such a formula
-by expanding A(x) into a power series by any method you can
-think of. In particular, if A(x) is a rational function (quotient
-of two polynomials), then success will result from expanding in
-partial fractions and then handling each of the resulting terms
-separately.
+  the given recurrence relation, then attempt to get such a formula
+  by expanding $A(x)$ into a power series by any method you can
+  think of. In particular, if $A(x)$ is a rational function (quotient
+  of two polynomials), then success will result from expanding in
+  partial fractions and then handling each of the resulting terms
+  separately.
 
 ## Worked Example
 
@@ -95,16 +96,24 @@ Count partitions of $n$ into distinct parts.
 
 Use the generating function $\prod_{k\ge1}(1+x^k)$.
 
-### Example 3: Recurrence Extraction
+### Example 3: Recurrence Extraction (ADVANCED)
 
 Find the general term of $f_{n+1}=f_n+f_{n-1}$ where $n \ge 1, f_0 = 0, f_1 = 1$
 
 By using the above method, we let $F(x) = \sum_{n \ge 0} f_nx^n$
-By manipulating the given recurrence relation (multiply by $x^n$ and sum over $n \ge 1$):
+By manipulating the given recurrence relation (multiply by $x^n$ and sum over $n \ge 1$),
 
-$$f_2x^1+f_3x^2+f_4x^3+\cdots = (f_1x^1+f_2x^2+f_3x^3+\cdots) + (f_1x^1+f_2x^2+f_3x^3+\cdots)$$. 
+$$f_2x^1+f_3x^2+f_4x^3+\cdots = (f_1x^1+f_2x^2+f_3x^3+\cdots) + (f_0x^1+f_1x^2+f_2x^3+\cdots)$$
 
-Remember that $f_0 = 0$.
+Remember that $f_0 = 0$ and $f_1 = 1$.
+
+Then, 
+
+$$\frac{F(x)-x}{x} = F(x) + xF(x)$$
+
+By manipulating this, we get:
+
+$$F(x)=\frac{}{}$$
 
 ### Example 4: Counting Word Problem
 
