@@ -87,8 +87,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
       name: 'Number Theory',
       description: 'Primes, divisibility, modular arithmetic, and integer properties.',
       items: [
-        'primes-and-composites',
-        'prime-factorization',
+        'divisibility-primes',
         'divisibility-rules',
         'gcd-and-lcm',
         'divisor-counting-formulas',
