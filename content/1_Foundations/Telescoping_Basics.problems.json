@@ -1,17 +1,17 @@
 {
-  "MODULE_ID": "triangle-fundamentals",
+  "MODULE_ID": "telescoping-basics",
   "practice": [
     {
-      "uniqueId": "mastering-amc8-24-6-14",
-      "name": "Problem 24.6.14 (Mastering AMC 8)",
+      "uniqueId": "mastering-amc8-16-6-10",
+      "name": "Problem 16.6.10 (Mastering AMC 8)",
       "url": "https://www.omegalearn.org/mastering-amc8",
       "source": "Mastering AMC 8",
       "difficulty": "Medium",
       "isStarred": false,
       "tags": [
-        "Triangles"
+        "Telescoping"
       ],
-      "statement": "What is the radius of a circle inscribed in a triangle with side lengths 6, 8, and 10?",
+      "statement": "Evaluate 1 2 × 3 + 1 3 × 4 + · · ·+ 1 10 × 11",
       "solutionMetadata": {
         "kind": "none"
       }

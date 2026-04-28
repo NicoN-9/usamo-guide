@@ -57,6 +57,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
         'quadratic-formula',
         'substitution-techniques',
         'geometric-sequences',
+        'telescoping-basics',
       ],
     },
     {
@@ -81,6 +82,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
         'similarity-basics',
         'proportionality-thales',
         'line-equations',
+        'three-d-geometry-basics',
       ],
     },
     {
@@ -94,6 +96,7 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
         'modular-arithmetic-intro',
         'units-digit-periodicity',
         'base-number-systems',
+        'miscellaneous-number-theory',
 
         // shifted
         'linear-diophantine-equations',
@@ -111,6 +114,8 @@ const MODULE_ORDERING: { [key in SectionID]: Chapter[] } = {
         'geometric-probability-intro',
         'inclusion-exclusion',
         'stars-and-bars',
+        'geometric-counting',
+        'recursion-basics',
 
         // shifted
         'pascals-triangle-binomial-theorem',

@@ -41,11 +41,30 @@ $\binom{5}{2} = \frac{5 \times 4}{2 \times 1} = 10$. Cancel before multiplying.
 If some items are identical, divide by the factorial of each group of repeats:
 arrangements of MISSISSIPPI = $\frac{11!}{4! \cdot 4! \cdot 2!}$.
 
+### Circular Arrangements
+
+When objects are arranged around a circle, rotations are considered the same.
+Fix one object in place and permute the rest, giving $(n-1)!$ circular
+arrangements for $n$ distinct objects.
+
+### Digit Arrangements with Restrictions
+
+For digit problems, handle leading-zero restrictions first. A common pattern is:
+
+1. Count all valid first-digit choices.
+2. Count choices for remaining positions.
+3. Multiply using the rule of product.
+
+This avoids overcounting invalid numbers that start with 0.
+
 ## Worked Example
 
 How many ways can you choose 3 books from a shelf of 7?
 
 $\binom{7}{3} = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35$.
+
+If order mattered, the answer would instead be
+$P(7,3) = 7 \cdot 6 \cdot 5 = 210$.
 
 ## Practice Problems
 

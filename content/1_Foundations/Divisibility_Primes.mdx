@@ -34,6 +34,17 @@ Prime numbers are so important to number theory mainly because of the **Fundamen
 Every positive integer has a unique **prime factorization** (i.e. a factorization with only prime factors). In other words we can write any positive integer $n$ as $n=p_1^{e_1}p_2^{e_2}\cdot\cdot\cdot p_k^{e_k}$, where $p_1,p_2,...,p_k$ are primes and exponents $e_1,e_2,...,e_k$ are positive integers.
 
 For example, the prime factorization of 28 is $2^2\times7$.
+
+When factorials appear, we often need the exponent of a prime in $n!$. Use
+Legendre's Formula:
+
+$$
+v_p(n!) = \left\lfloor\frac{n}{p}\right\rfloor
++ \left\lfloor\frac{n}{p^2}\right\rfloor
++ \left\lfloor\frac{n}{p^3}\right\rfloor + \cdots
+$$
+
+This is especially useful for trailing-zero and divisibility questions.
 ## Sieve of Eratosthenes
 To list all the primes under a number $n$ quickly, we can use an algorithm called the **sieve of Eratosthenes**. It works like this:
 1. Start with a list of consecutive integers from 2 to $n$.

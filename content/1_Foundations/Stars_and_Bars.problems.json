@@ -138,6 +138,36 @@
       "solutionMetadata": {
         "kind": "none"
       }
+    },
+    {
+      "uniqueId": "mastering-amc8-8-3-1",
+      "name": "Problem 8.3.1 (Mastering AMC 8)",
+      "url": "https://www.omegalearn.org/mastering-amc8",
+      "source": "Mastering AMC 8",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Stars and Bars"
+      ],
+      "statement": "How many ways are there to distribute 5 identical candies to 3 children?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "mastering-amc8-8-3-6",
+      "name": "Problem 8.3.6 (Mastering AMC 8)",
+      "url": "https://www.omegalearn.org/mastering-amc8",
+      "source": "Mastering AMC 8",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Stars and Bars"
+      ],
+      "statement": "How many positive 5 digit integers exist such that each digit is greater than or equal to the previous digit?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
     }
   ]
 }

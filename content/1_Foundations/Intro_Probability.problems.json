@@ -1411,6 +1411,51 @@
       "solutionMetadata": {
         "kind": "none"
       }
+    },
+    {
+      "uniqueId": "mastering-amc8-4-7-1",
+      "name": "Problem 4.7.1 (Mastering AMC 8)",
+      "url": "https://www.omegalearn.org/mastering-amc8",
+      "source": "Mastering AMC 8",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Probability"
+      ],
+      "statement": "Two 6-sided dice are rolled. What is the probability that the sum of the numbers rolled is 2?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "mastering-amc8-4-7-2",
+      "name": "Problem 4.7.2 (Mastering AMC 8)",
+      "url": "https://www.omegalearn.org/mastering-amc8",
+      "source": "Mastering AMC 8",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Probability"
+      ],
+      "statement": "Two 6-sided dice are rolled. What is the probability that the sum of the numbers rolled is 4?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "mastering-amc8-4-7-3",
+      "name": "Problem 4.7.3 (Mastering AMC 8)",
+      "url": "https://www.omegalearn.org/mastering-amc8",
+      "source": "Mastering AMC 8",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Probability"
+      ],
+      "statement": "Two dice are rolled. What is the probability that the sum of the numbers rolled is 6?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
     }
   ]
 }

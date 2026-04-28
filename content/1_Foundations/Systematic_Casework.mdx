@@ -39,12 +39,24 @@ Use a table or list. Label cases clearly: Case 1, Case 2, etc.
 Make sure no outcome is counted in two different cases. Define boundaries
 precisely.
 
+### End-of-Case Sanity Checks
+
+After summing cases, verify the total with one quick check such as parity,
+small-value testing, or a rough upper/lower bound.
+
 ## Worked Example
 
 How many two-digit numbers have digits that sum to 8?
 
 Case on the tens digit $t$ (where $t \ge 1$): $(1,7), (2,6), (3,5), (4,4),
 (5,3), (6,2), (7,1), (8,0)$. That is 8 numbers.
+
+A clean checklist for harder problems:
+
+1. Pick one partition variable.
+2. Ensure cases are exhaustive and disjoint.
+3. Compute each case completely.
+4. Sum and sanity-check.
 
 ## Practice Problems
 

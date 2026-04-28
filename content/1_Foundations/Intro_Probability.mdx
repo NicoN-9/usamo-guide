@@ -21,6 +21,8 @@ diagrams, or symmetry to compute probabilities directly.
 - Use the rule of product to count outcomes in multi-step experiments.
 - Conditional probability: $P(A\mid B) = P(A\cap B)/P(B)$.
 - Independence: $P(A\cap B) = P(A)P(B)$.
+- Distinguish dependent events (without replacement) from independent events
+	(with replacement, or separate trials).
 
 ## Core Skills
 
@@ -36,6 +38,14 @@ If the event is "at least" or "not equal", count the opposite event first.
 ### Track Conditional Events
 
 After a condition occurs, update the sample space before counting.
+
+### Distinguishability and Cases
+
+If outcomes are generated in stages, check whether order creates different
+outcomes. If yes, use ordered counting and then convert to probability.
+
+For non-uniform sample spaces, split into clean cases, compute each case
+probability, and add.
 
 ### Expected value
 For a random variable $X$ with outcomes $x_1, x_2, \ldots, x_n$ occurring with probabilities $p_1, p_2, \ldots, p_n$
@@ -77,6 +87,15 @@ What is the probability that at least one of two fair dice shows a $6$?
 
 Complement: no $6$ on either die. That is $(5/6)^2 = 25/36$.
 So the probability is $1 - 25/36 = 11/36$.
+
+### Example 5: Dependent vs. Independent
+
+Two marbles are drawn from a bag with 4 red and 3 blue marbles.
+
+- With replacement: $P(\text{red then red}) = \frac{4}{7}\cdot\frac{4}{7}$.
+- Without replacement: $P(\text{red then red}) = \frac{4}{7}\cdot\frac{3}{6}$.
+
+The denominators change only in the dependent case.
 
 ### Example 4: Expected Value
 

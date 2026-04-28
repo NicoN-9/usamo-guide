@@ -1,0 +1,59 @@
+---
+id: telescoping-basics
+title: Telescoping Basics
+author: USAMO Guide Team
+description: Simplifying sums and products by cancellation of consecutive terms.
+prerequisites: [arithmetic-sequences, geometric-sequences]
+---
+
+<IncompleteSection />
+
+## Overview
+
+A telescoping expression is designed so most terms cancel. This appears in AMC
+style sequence and series questions where direct expansion would be too long.
+
+## Key Ideas
+
+- Rewrite terms to expose cancellation patterns.
+- In telescoping sums, adjacent positive and negative parts cancel.
+- In telescoping products, factors in numerator and denominator cancel.
+- Write first few and last few terms before simplifying.
+
+## Core Skills
+
+### Telescoping Sum Pattern
+
+A common form is
+
+$$\sum_{k=1}^{n}(a_k-a_{k+1}) = a_1-a_{n+1}.$$
+
+### Partial Fractions for Telescoping
+
+Expressions like
+
+$$\frac{1}{k(k+1)} = \frac{1}{k} - \frac{1}{k+1}$$
+
+convert a hard sum into a telescoping sum.
+
+### Telescoping Product Pattern
+
+For products like
+
+$$\prod_{k=1}^{n}\frac{k+1}{k}=\frac{2}{1}\cdot\frac{3}{2}\cdots\frac{n+1}{n}=n+1.$$
+
+## Worked Example
+
+Compute
+
+$$\sum_{k=1}^{10}\frac{1}{k(k+1)}.$$
+
+Rewrite each term as $\frac1k-\frac1{k+1}$:
+
+$$\left(1-\frac12\right)+\left(\frac12-\frac13\right)+\cdots+\left(\frac1{10}-\frac1{11}\right)=1-\frac1{11}=\frac{10}{11}.$$
+
+So the sum is $\boxed{\frac{10}{11}}$.
+
+## Practice Problems
+
+<Problems problems="practice" />

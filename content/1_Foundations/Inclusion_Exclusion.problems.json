@@ -345,6 +345,81 @@
       "solutionMetadata": {
         "kind": "none"
       }
+    },
+    {
+      "uniqueId": "mastering-amc8-7-5-1",
+      "name": "Problem 7.5.1 (Mastering AMC 8)",
+      "url": "https://www.omegalearn.org/mastering-amc8",
+      "source": "Mastering AMC 8",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Inclusion Exclusion"
+      ],
+      "statement": "How many positive numbers less than or equal to 100 are multiples of 2 or 3?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "mastering-amc8-7-5-2",
+      "name": "Problem 7.5.2 (Mastering AMC 8)",
+      "url": "https://www.omegalearn.org/mastering-amc8",
+      "source": "Mastering AMC 8",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Inclusion Exclusion"
+      ],
+      "statement": "How many positive numbers less than or equal to 100 are NOT multiples of 2 or 3?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "mastering-amc8-7-5-3",
+      "name": "Problem 7.5.3 (Mastering AMC 8)",
+      "url": "https://www.omegalearn.org/mastering-amc8",
+      "source": "Mastering AMC 8",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Inclusion Exclusion"
+      ],
+      "statement": "Out of 200 students, there are 100 taking Geometry, 70 taking Algebra, and 30 tak- ing both. How many students are taking neither?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "mastering-amc8-7-5-5",
+      "name": "Problem 7.5.5 (Mastering AMC 8)",
+      "url": "https://www.omegalearn.org/mastering-amc8",
+      "source": "Mastering AMC 8",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Inclusion Exclusion"
+      ],
+      "statement": "In a town of 351 adults, every adult owns a car, motorcycle, or both. If 331 adults own cars and 45 adults own motorcycles, how many of the car owners do not own a motorcycle?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "mastering-amc8-7-5-7",
+      "name": "Problem 7.5.7 (Mastering AMC 8)",
+      "url": "https://www.omegalearn.org/mastering-amc8",
+      "source": "Mastering AMC 8",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Inclusion Exclusion"
+      ],
+      "statement": "How many positive numbers less than or equal to 200 are multiples of 2 and 3 but not a multiple of 5?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
     }
   ]
 }

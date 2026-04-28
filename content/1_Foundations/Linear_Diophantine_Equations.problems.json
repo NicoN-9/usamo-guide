@@ -1,4 +1,20 @@
 {
   "MODULE_ID": "linear-diophantine-equations",
-  "practice": []
+  "practice": [
+    {
+      "uniqueId": "mastering-amc8-21-5-14",
+      "name": "Problem 21.5.14 (Mastering AMC 8)",
+      "url": "https://www.omegalearn.org/mastering-amc8",
+      "source": "Mastering AMC 8",
+      "difficulty": "Medium",
+      "isStarred": false,
+      "tags": [
+        "Diophantine Equations"
+      ],
+      "statement": "After the digits of a 3 digit number are reversed, the number is 297 more than the original number. What’s the largest possible value for the original number?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    }
+  ]
 }

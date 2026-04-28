@@ -1,0 +1,60 @@
+---
+id: recursion-basics
+title: Recursion Basics
+author: USAMO Guide Team
+description: Building and solving simple recursive counting and probability models.
+prerequisites: [counting-fundamentals, systematic-casework]
+---
+
+<IncompleteSection />
+
+## Overview
+
+Recursion models a problem in terms of smaller versions of itself. On AMC 8,
+recursion is especially useful in path counting, constrained arrangements, and
+step-by-step probability processes.
+
+## Key Ideas
+
+- A recursion needs a **state** and a **transition rule**.
+- Always define a **base case** so the recursion can start.
+- Compute values in increasing order when possible.
+- For probability recursion, total probability from a state equals the weighted
+  average of reachable next states.
+
+## Core Skills
+
+### Defining the State
+
+Pick one variable that captures progress, such as position, number of steps, or
+remaining objects.
+
+### Writing the Recurrence
+
+Express the current value using smaller states, for example:
+
+$$f(n) = f(n-1) + f(n-2)$$
+
+if each move is either 1 step or 2 steps.
+
+### Checking Base Cases
+
+A recurrence without correct base values gives incorrect answers even if the
+formula is right.
+
+## Worked Example
+
+How many ways can you climb a staircase of 5 steps if each move is 1 or 2
+steps?
+
+Let $f(n)$ be the number of ways to reach step $n$.
+
+- $f(0)=1$ (one way to stay at the start)
+- $f(1)=1$
+- $f(n)=f(n-1)+f(n-2)$ for $n\ge2$
+
+Then $f(2)=2$, $f(3)=3$, $f(4)=5$, $f(5)=8$, so the answer is $\boxed{8}$.
+
+## Practice Problems
+
+<Problems problems="practice" />
