@@ -24,6 +24,11 @@ Even simple applications can simplify counting and recurrence problems.
 
 ## Core Skills
 
+### Notation
+
+When you want to extract the $x^n$ coefficient of the generating function $F(x)$, 
+use the notation $[x^n] F(x)$
+
 ### Translate Choices to Factors
 
 Each variable contributes a factor $(1+x+x^2+\cdots)$ or a finite polynomial
@@ -34,10 +39,12 @@ depending on constraints.
 Use known expansions like $(1-x)^{-k}$ or binomial coefficients to read off
 coefficients.
 
+Use the geometric series: $1+x+x^2+x^3+\cdots=\frac{1}{1-x}$.
+
 ### Use Truncation
 
 When only low-degree terms matter, ignore higher powers after expansion. 
-For example, when you want the coeffecient of the term $x^3$, you can ignore multiplying by $x^4$ as it will only produce powers $\ge 4$.
+For example, when you want the coefficient of the term $x^3$, you can ignore multiplying by $x^4$ as it will only produce powers $\ge 4$.
 
 ### Representations
 
@@ -96,7 +103,16 @@ Count partitions of $n$ into distinct parts.
 
 Use the generating function $\prod_{k\ge1}(1+x^k)$.
 
-### Example 3: Recurrence Extraction (ADVANCED)
+### Example 3: Counting Word Problem
+
+Alice went to a store and saw three items: an apple (cost: 9 cents), a banana (cost: 14 cents), and an orange (cost: 17 cents).
+She has exactly 2 dollars and doesn't want any change. In how many ways can she achieve this?
+
+Convert this problem into equations: let $x$ be the number of apples, $y$ be the number of bananas, $z$ be the number of oranges.
+Then $x, y, z \ge 0$. So constraints is $9x + 14y + 17z = 200$. So we wish to find the $x^{200}$ coefficient of 
+$$\sum^{\infty}_{i=0} (x^9+x^{14}+x^{17})^i$$
+
+### Example 4: Recurrence Extraction (ADVANCED)
 
 Find the general term of $f_{n+1}=f_n+f_{n-1}$ where $n \ge 1, f_0 = 0, f_1 = 1$
 
@@ -113,16 +129,14 @@ $$\frac{F(x)-x}{x} = F(x) + xF(x)$$
 
 By manipulating this, we get:
 
-$$F(x)=\frac{}{}$$
+$$F(x)=\frac{x}{1-x-x^2}$$
 
-### Example 4: Counting Word Problem
+By doing partial fractions, we can let this as:
 
-Alice went to a store and sees three items: an apple (cost: 9 cents), a banana (cost: 14 cents), and an orange (cost: 17 cents).
-She has exactly 2 dollars, and doesn't want any change. In how many ways can she achieve this?
+$$F(x)=\frac{x}{(x-\alpha)(x-\beta)} = \frac{1}{\alpha-\beta} (\frac{1}{x-\alpha}-\frac{1}{x-\beta})$$
 
-Convert this problem into equations: let $x$ be the number of apples, $y$ be the number of bananas, $z$ be the number of oranges.
-Then $x, y, z \ge 0$. So constraints is $9x + 14y + 17z = 200$. So we wish to find the $x^{200}$ coefficient of 
-$$\sum^{\infty}_{i=0} (x^9+x^{14}+x^{17})^i$$
+Where $\alpha = \frac{1+\sqrt{5}}{2}$ and $\beta = \frac{1-\sqrt{5}}{2} (Notice that $\alpha = \phi$, the golden ratio).
+Now, using the identity 
 
 ## Strategy Checklist
 
