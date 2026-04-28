@@ -131,20 +131,25 @@ By manipulating this, we get:
 
 $$F(x)=\frac{x}{1-x-x^2}$$
 
-By doing partial fractions, we can let this as:
+By doing partial fractions, we can let this be:
 
 $$F(x)=\frac{x}{(x-\alpha)(x-\beta)} = \frac{1}{\alpha-\beta} (\frac{1}{x-\alpha}-\frac{1}{x-\beta})$$
 
-Where $\alpha = \frac{1+\sqrt{5}}{2}$ and $\beta = \frac{1-\sqrt{5}}{2} (Notice that $\alpha = \phi$, the golden ratio).
-Now, using the identity 
+$$= -\frac{1}{\alpha-\beta} (\frac{1}{\alpha} \cdot \frac{1}{1-\frac{x}{\alpha}}- \frac{1}{\beta} \cdot \frac{1}{1-\frac{x}{\beta}})$$
+
+Where $\alpha = \frac{1+\sqrt{5}}{2}$ and $\beta = \frac{1-\sqrt{5}}{2}$ (Notice that $\alpha = \phi$, the golden ratio).
+Now, using the geometric series $\frac{1}{1-x} = 1+x+x^2+x^3+\cdots$.
+
+$$[x^n] F(x) = -\frac{1}{\alpha-\beta} (\frac{1}{\alpha} \cdot (\frac{1}{\alpha})^n - \frac{1}{\alpha} \cdot (\frac{1}{\alpha})^n)$$
 
 ## Strategy Checklist
 
 - Translate each constraint into a factor.
 - Use binomial series for $(1-x)^{-k}$.
+  - Use the geometric series $$
 - Truncate when only a few coefficients are needed.
 - Convert the amount of an item into a power of $x$
-- 
+- Use the above 'method' to solve for the recurrence relation.
 
 ## Practice Problems
 
