@@ -386,6 +386,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   let problemURLToUniqueID = {}; // maps problem URL to problem unique ID
   let urlsThatCanHaveMultipleUniqueIDs: string[] = [
     'https://usamoguide.com/',
+    'https://www.omegalearn.org/mastering-amc8',
   ];
   problems.forEach(({ node }) => {
     let slug = getProblemURL(node);
