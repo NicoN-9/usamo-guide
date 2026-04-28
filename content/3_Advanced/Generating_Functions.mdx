@@ -27,7 +27,7 @@ Even simple applications can simplify counting and recurrence problems.
 ### Notation
 
 When you want to extract the $x^n$ coefficient of the generating function $F(x)$, 
-use the notation $[x^n] F(x)$
+use the notation $[x^n]\ F(x)$
 
 ### Translate Choices to Factors
 
@@ -57,7 +57,8 @@ Represent numbers such as cost or amount in the power.
 
 When given a recurrence formula that is to be solved by using generating functions, use the following method:
 1. Make sure that the values of the variable (e.g. $n$) such that the recurrence 
-  relation is true, is clearly described
+  relation is true, is clearly described.
+
 2. Give a name to the generating function that you will look for, and
   write out that function in terms of the unknown sequence (e.g.,
   call it $A(x)=\sum_{n \ge 0} a_nx^n$).
@@ -133,14 +134,22 @@ $$F(x)=\frac{x}{1-x-x^2}$$
 
 By doing partial fractions, we can let this be:
 
-$$F(x)=\frac{x}{(x-\alpha)(x-\beta)} = \frac{1}{\alpha-\beta} (\frac{1}{x-\alpha}-\frac{1}{x-\beta})$$
+$$F(x)=\frac{x}{(\alpha x -1 )(\beta x - 1)} = \frac{1}{\alpha-\beta} (\frac{1}{\beta x - 1}-\frac{1}{\alpha x- 1})$$
 
-$$= -\frac{1}{\alpha-\beta} (\frac{1}{\alpha} \cdot \frac{1}{1-\frac{x}{\alpha}}- \frac{1}{\beta} \cdot \frac{1}{1-\frac{x}{\beta}})$$
+$$= \frac{1}{\alpha-\beta} (\frac{1}{\alpha x - 1}-\frac{1}{\beta x- 1})$$
 
 Where $\alpha = \frac{1+\sqrt{5}}{2}$ and $\beta = \frac{1-\sqrt{5}}{2}$ (Notice that $\alpha = \phi$, the golden ratio).
 Now, using the geometric series $\frac{1}{1-x} = 1+x+x^2+x^3+\cdots$.
 
-$$[x^n] F(x) = -\frac{1}{\alpha-\beta} (\frac{1}{\alpha} \cdot (\frac{1}{\alpha})^n - \frac{1}{\alpha} \cdot (\frac{1}{\alpha})^n)$$
+$$[x^n]\ F(x) = \frac{1}{\alpha-\beta} (\alpha^n - \beta^n)$$
+
+By substituting the values of $\alpha$ and $\beta$, 
+
+$$[x^n]\ F(x) = \frac{1}{\sqrt{5}} ((\frac{1+\sqrt{5}}{2})^n - (\frac{1-\sqrt{5}}{2})^n)$$
+
+When comparing this to Binet's formula for Fibonacci numbers, this is equal to 
+
+$$f_n = \frac{1}{\sqrt{5}} ((\frac{1+\sqrt{5}}{2})^n - (\frac{1-\sqrt{5}}{2})^n)$$
 
 ## Strategy Checklist
 
@@ -150,6 +159,12 @@ $$[x^n] F(x) = -\frac{1}{\alpha-\beta} (\frac{1}{\alpha} \cdot (\frac{1}{\alpha}
 - Truncate when only a few coefficients are needed.
 - Convert the amount of an item into a power of $x$
 - Use the above 'method' to solve for the recurrence relation.
+  1. Describe variables
+  2. Name Generating Functions
+  3. Sum over all $n$ that the relation holds
+  4. Express equation in generating function from Step 2
+  5. Solve equation
+  6. Expand generating function into power series to extract coefficient.
 
 ## Practice Problems
 
