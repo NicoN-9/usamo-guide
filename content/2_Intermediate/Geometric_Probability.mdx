@@ -17,17 +17,17 @@ In a probability question, we want to find the ratio of the set of desired outco
 - These problems essentially have two parts: (1) modelling the problem geometrically (2) calculating the areas
 - As in finite probability, it can be easier to find the probability of the complement (i.e. the probability of the event **NOT** happening)
 
-### Worked Example #1 (2011 AMC 10B #16)
+## Worked Example #1 (2011 AMC 10B #16)
 A dart board is a regular octagon divided into regions as shown. Suppose that a dart thrown at the board is equally likely to land anywhere on the board. What is the probability that the dart lands within the center square?
 
-![](./static/images/geometric-probability-0.png)
+<img src="/images/geometric-probability-0.png" width="200"/>
 
-#### Solution
+### Solution
 The probability that the dart lands within the center square is simply the ratio of the area of the center square to the area of the dart board. Since we are only concerned with the ratio between the areas, we can set the side length of the octagon to be $\sqrt{2}$ to make the calculations easier.
 
 > Remember, don't be afraid to set lengths in geometry problems to a value that will make calculations easier.
 
-![](./static/images/geometric-probability-1.png)
+<img src="/images/geometric-probability-1.png" width="300"/>
 
 The side length of the octagon and the side length of the center square are equal. So, the area of the center square is simply $(\sqrt{2})^2 = 2$.
 
@@ -36,15 +36,15 @@ By Pythagoras, the side length of one of the right triangles on the corners of t
 Our answer is simply the ratio of these two numbers.
 $$\frac{2}{4+4\sqrt{2}} = \frac{1}{2+2\sqrt{2}} \times \frac{2-2\sqrt{2}}{2-2\sqrt{2}} = \frac{2-2\sqrt{2}}{-4} =  \boxed{\frac{\sqrt{2}-1}{2}}$$
 
-### Worked Example #2 (1998 AIME #9)
+## Worked Example #2 (1998 AIME #9)
 Two mathematicians take a morning coffee break each day.  They arrive at the cafeteria independently, at random times between 9 a.m. and 10 a.m., and stay for exactly $m$ minutes.  The probability that either one arrives while the other is in the cafeteria is $40 \%,$ and $m = a - b\sqrt {c},$ where $a, b,$ and $c$ are positive integers, and $c$ is not divisible by the square of any prime.  Find $a + b + c.$
  
-#### Solution
+### Solution
 The problem statement doesn't directly mention geometry, so we have to make a model of the problem that involves geometry.
 
 Let $x$, $y$ be the times the two mathematicians arrive in terms of minutes past 9 am. The mathematicians meet when $|x-y|<m$. Consider plotting $x, y$ on a coordinate plane. Since the mathematicians arrive between 9 and 10 am, $0<x,y<60$. This means all pairs of arrival times are in a $60\times60$ square. The shaded region contains all pairs of arrival times where the mathematicians meet.
 
-![](./static/images/geometric-probability-2.png)
+<img src="/images/geometric-probability-2.png" width="400"/>
 
 Thus, the probability of the mathematicians meeting is equal to the ratio of the shaded area to the total area (i.e. the square). Here, it's actually more convenient to calculate the ratio of the unshaded area (two right triangles) to the total area, which is the probability that the mathematicians do not meet (which is 0.6).
 

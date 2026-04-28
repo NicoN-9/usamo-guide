@@ -627,7 +627,7 @@ export default function IndexPage({ path }): JSX.Element {
             No part of this website may be reproduced or commercialized in any
             manner without prior written permission.{' '}
             <Link to="/license" className="underline">
-              Learn More.
+              License
             </Link>
             {' | '}
             <Link to="/privacy-policy" className="underline">

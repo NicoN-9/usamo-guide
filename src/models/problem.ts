@@ -190,9 +190,12 @@ export function getProblemURL(
     [x: string]: any;
   }
 ): string {
-  return `/problems/${slug(problem.source)}-${slug(
+  const baseSlug = `${slug(problem.source)}-${slug(
     (problem.name || '').replace(' - ', ' ')
   )}`;
+  // Include uniqueId to avoid collisions when different problems share source+name.
+  const uniqueSuffix = problem.uniqueId ? `-${slug(problem.uniqueId)}` : '';
+  return `/problems/${baseSlug}${uniqueSuffix}`;
 }
 
 function normalizeProblemInteraction(

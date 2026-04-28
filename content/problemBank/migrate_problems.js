@@ -5,7 +5,6 @@ const SOURCE_FILE = './content/problemBank/bank.json';
 const UNMAPPED_FILE = './unmapped_problems.json';
 
 const categoryMap = {
-  "Arithmetic and Number Theory Basics": "content/1_Foundations/Arithmetic_Number_Theory_Basics.problems.json",
   "Arithmetic Sequences": "content/1_Foundations/Arithmetic_Sequences.problems.json",
   "Exponent Rules": "content/1_Foundations/Exponent_Rules.problems.json",
   "Geometry Basics": "content/1_Foundations/Geometry_Basics.problems.json",

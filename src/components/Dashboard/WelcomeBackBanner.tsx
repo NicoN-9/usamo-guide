@@ -17,7 +17,7 @@ export default function WelcomeBackBanner({
         className="block px-4 py-6 sm:flex sm:items-center sm:justify-between sm:p-8"
         to={
           lastViewedModuleURL ||
-          '/foundations/arithmetic-nt-basics'
+          '/foundations/fraction-decimal-percent'
         }
       >
         <div>
@@ -30,7 +30,7 @@ export default function WelcomeBackBanner({
             <p>
               {lastViewedModuleURL
                 ? `Pick up where you left off. Your last viewed module was "${lastViewedModuleLabel}."`
-                : `Get started on the first module, "Arithmetic and Number Theory Basics."`}
+                : `Get started on the first module, "Fraction, Decimal, Percent Conversions."`}
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function WelcomeBackBanner({
             >
               {lastViewedModuleURL
                 ? `Continue: ${lastViewedModuleLabel}`
-                : `Get Started: Arithmetic and Number Theory Basics!`}
+                : `Get Started: Fraction, Decimal, Percent Conversions!`}
             </span>
           </span>
         </div>

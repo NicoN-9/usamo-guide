@@ -1,9 +1,0 @@
-Check status:
-git status
-Stage changes:
-git add .
-(or git add <file> for specific files)
-Commit:
-git commit -m "Describe your change"
-Push:
-git push

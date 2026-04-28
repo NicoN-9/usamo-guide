@@ -50,18 +50,12 @@ const problemsQuery = `{
           choices
           correctIndex
         }
-        solutionReveal {
-          mode
-          url
-          markdown
-        }
         solution {
           kind
           label
           labelTooltip
           hasHints
           url
-          sketch
         }
         module {
           frontmatter {
@@ -131,8 +125,8 @@ const queries = [
   },
   {
     query: problemsQuery,
-    transformer: ({ data }): AlgoliaProblemInfo[] => {
-      const res: AlgoliaProblemInfo[] = [];
+    transformer: ({ data }): any[] => {
+      const res: any[] = [];
       data.data.edges.forEach(({ node }) => {
         // some problems appear in multiple modules
         const existingProblem = res.find(x => x.objectID === node.uniqueId);
@@ -157,24 +151,26 @@ const queries = [
             existingProblem.problemModules.push(moduleInfo);
           }
         } else {
+          const solution = node.solution
+            ? {
+                kind: node.solution.kind,
+                label: node.solution.label,
+                labelTooltip: node.solution.labelTooltip,
+                hasHints: node.solution.hasHints,
+                url: node.solution.url,
+              }
+            : null;
+
           res.push({
             objectID: node.uniqueId,
             name: node.name,
             source: node.source,
             tags: node.tags || [],
             url: node.url,
-            difficulty:
-              node.difficulty != null ? String(node.difficulty) : null,
+            difficulty: (node.difficulty ?? 'N/A') as AlgoliaProblemInfo['difficulty'],
             isStarred: node.isStarred,
             interaction: node.interaction,
-            solutionReveal: node.solutionReveal,
-            // this removes null fields from the problem info solution
-            // graphql doesn't do this for us so we need to do it manually
-            solution: node.solution
-              ? (Object.fromEntries(
-                  Object.entries(node.solution).filter(([_, v]) => v != null)
-                ) as any)
-              : null,
+            solution,
             problemModules: moduleInfo ? [moduleInfo] : [],
           });
         }

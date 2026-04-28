@@ -351,10 +351,10 @@ export default function IndexPage({ path }): JSX.Element {
               <div className="grid items-center gap-10 lg:grid-cols-12">
                 <div className="lg:col-span-7">
                   <h2
-                    className="max-w-3xl text-left text-4xl font-bold tracking-tight md:text-5xl 2xl:text-6xl"
+                    className="max-w-3xl text-left text-3xl font-bold tracking-tight md:text-4xl 2xl:text-5xl"
                     style={{ color: TEXT_PRIMARY }}
                   >
-                    Join our Team.
+                    Contribute to the Community.
                   </h2>
                   <div className="h-5"></div>
                   <p
@@ -379,7 +379,7 @@ export default function IndexPage({ path }): JSX.Element {
                       '--pme-wipe-bg': '#F0C2FF',
                     } as React.CSSProperties}
                   >
-                    Apply Now
+                    Get Involved
                   </a>
                 </div>
                 <div className="lg:col-span-5">
@@ -571,8 +571,8 @@ export default function IndexPage({ path }): JSX.Element {
             &copy; {new Date().getFullYear()} USAMO Guide.
             <br />
             No part of this website may be reproduced or commercialized in any manner without prior written permission.{' '}
-            <Link to="/license" style={linkStyle}>
-              Learn More.
+            <Link to="https://usamoguide.com/license.txt" style={linkStyle}>
+              License
             </Link>
             {' | '}
             <Link to="/privacy-policy" style={linkStyle}>
