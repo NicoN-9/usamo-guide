@@ -1,0 +1,78 @@
+---
+id: olympiad-angle-chasing
+title: Angle Chasing
+author: Nico Young
+description: The core of olympiad geometry
+prerequisites: ["geometry-advanced", "proof-writing-basics"]
+---
+
+## Overview
+
+In this section we'll be talking about angle chasing; 
+the basic of olympiad geometry. 
+
+**Angle chasing**, as the name suggests, 
+is about calculating angles. 
+Angle chasing is the core of synthetic geometry, 
+as it is related to some facts about lines and circles. 
+More precisely, 
+- Three points $A$, $B$, $C$ are collinear in this order, iff $\angle ABC=0^\circ$. 
+- Four points $A$, $B$, $C$, $D$ are concyclic in this order, iff $\angle ABD=\angle ACD$. (But $\angle ABC=180^\circ -\angle ADC$ nontheless; we'll talk about this later).
+- Similar triangles! You should know SS, SAS, and ASA. 
+
+In most of the geometry problems, in order to prove the result, 
+you will need to find the ``hidden'' line or circles, 
+four points are concyclic, three points are collinear, etc. 
+where angle chasing is one of the used way to prove those. 
+
+## Directed angles 
+
+The most annoying issue about olympiad geometry is the **configuration issue**; 
+let us introduce the example of that. 
+
+**Example 1**: Let $A$, $B$, $X$, $Y$ be four points on the plane. 
+- If $X$, $Y$ is on the *same* side with respect to the line $AB$, those four are concyclic iff $\angle AXB=\angle AYB$. 
+- If $X$, $Y$ is on the *different* side with respect to the line $AB$, those four are concyclic iff $\angle AXB=180^\circ -\angle AYB$. 
+
+Doesn't this look annoying? This means that if we use angles are usual, we sometimes need a casework about configuration issues. So, here's the trick. What if we make angles directed, mod $180^\circ$? 
+
+**Definition 2**: We define directed angles of $\angle XYZ$, denoted as $\measuredangle XYZ$, as follows: 
+- The angle is taken modulo $180^\circ$, that is, $\measuredangle XYZ=\measuredangle XYZ +180^\circ=\measuredangle XYZ +180^\circ \cdot 2=\dots$ and so on. (Be careful that we use the "$=$" instead of "$\equiv $". We somehow write $0^\circ =180^\circ$ in terms of directed angles, but not $0^\circ \equiv 180^\circ \pmod {180^\circ}$). 
+- We have $\measuredangle XYZ=\angle XYZ$ iff $X$, $Y$, and $Z$ are in clockwise order, and $\measuredangle XYZ=-\angle XYZ$ otherwise. 
+
+What is this so cool about? Indeed, we have that: 
+
+**Rephrased Example 1**: Let $A$, $B$, $X$, $Y$ be four points on the plane. The four points are concyclic if and only if $\measuredangle AXB=\measuredangle AYB$. 
+
+So clean, right? Try to confirm that this is true by caseworking on configurations. this feels like considering complex roots in the polynomial. 
+
+Now you know how powerful the directed angle is, let me introduce some properties about directed angles. When you read this, try to confirm this by your sel (and also that it *fails* when we change $\measuredangle$ with $\angle$). 
+- We have $\measuredangle AOP+\measuredangle POB=\measuredangle AOB$. 
+- We have $\measuredangle ABC+\measuredangle BCA+\measuredangle CAB=0^\circ$. 
+- Let $Q$ be any point. Then $A$, $P$, $B$ are collinear if and only if $\measuredangle APQ=\measuredangle BPQ$. 
+
+If you think these are too much, don't worry, you'll get used to it. (Also note that directed angles are the "rewrite" technique, rather than a brand new theorem.) Read https://web.evanchen.cc/faq-contest.html#C-11 for more details. 
+
+When during contests, I recommend you to define directed angles before using it, they're somehow still not common (but getting popular these days). 
+
+## Configurations 
+
+Using angle chasing, we'll be dealing with example problems, as well as introducing famous configuration that you should know. 
+
+### Example 1: Orthocenter configuration 
+
+TODO 
+
+### Example 2: Incenter configuration 
+
+TODO 
+
+## Examples 
+
+TODO 
+
+## Practice Problems
+
+<Problems problems="practice" />
+
+
